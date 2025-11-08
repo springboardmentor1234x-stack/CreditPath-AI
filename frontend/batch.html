@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch Prediction - CreditPath-AI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🏦</span>
+                <span class="logo-text">CreditPath-AI</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="predict.html">Single Prediction</a></li>
+                <li><a href="batch.html" class="active">Batch Processing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>📊 Batch Prediction</h1>
+        <p>Process multiple borrowers at once - Upload CSV and get instant risk assessment</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        
+        <!-- CSV Template Info -->
+        <div class="csv-template">
+            <h4>📋 CSV File Format</h4>
+            <p>Your CSV file should contain the following columns (in any order):</p>
+            <p style="margin-top: 10px;">
+                <code>person_age</code>, <code>person_income</code>, <code>person_emp_exp</code>, 
+                <code>person_home_ownership</code>, <code>loan_amnt</code>, <code>loan_int_rate</code>, 
+                <code>loan_intent</code>, <code>credit_score</code>, <code>cb_person_cred_hist_length</code>, 
+                <code>previous_loan_defaults_on_file</code>
+            </p>
+            <button class="btn-upload" onclick="downloadTemplate()">
+                📥 Download Sample Template
+            </button>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <h2>Upload Borrowers Data</h2>
+            
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">📁</div>
+                <div class="upload-text">Drag & Drop CSV file here</div>
+                <div class="upload-hint">or click to browse</div>
+                <input type="file" id="fileInput" class="file-input" accept=".csv">
+                <button class="btn-upload" onclick="document.getElementById('fileInput').click()">
+                    Choose File
+                </button>
+            </div>
+
+            <div class="file-info" id="fileInfo">
+                <strong>Selected File:</strong> <span id="fileName"></span><br>
+                <strong>Size:</strong> <span id="fileSize"></span><br>
+                <button class="btn-upload" onclick="processBatch()" id="processBtn">
+                    🚀 Process Batch
+                </button>
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Processing predictions...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-message" id="errorMessage"></div>
+
+        <!-- Results Section -->
+        <div class="results-section" id="resultsSection">
+            <div class="results-header">
+                <h2>📈 Prediction Results</h2>
+                <div class="results-stats">
+                    <div class="stat-card">
+                        <div class="number" id="totalCount">0</div>
+                        <div class="label">Total Borrowers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number stat-high" id="highRiskCount">0</div>
+                        <div class="label">High Risk</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number stat-medium" id="mediumRiskCount">0</div>
+                        <div class="label">Medium Risk</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number stat-low" id="lowRiskCount">0</div>
+                        <div class="label">Low Risk</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-table-container">
+                <table class="results-table" id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Age</th>
+                            <th>Income</th>
+                            <th>Loan Amount</th>
+                            <th>Credit Score</th>
+                            <th>Default Probability</th>
+                            <th>Risk Level</th>
+                            <th>Recommendation</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsBody">
+                    </tbody>
+                </table>
+
+                <div class="batch-actions">
+                    <button class="btn-download" onclick="downloadResults()">
+                        💾 Download Results CSV
+                    </button>
+                    <button class="btn-new" onclick="resetForm()">
+                        🔄 Process New Batch
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>CreditPath-AI</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/batch.js"></script>
+</body>
+</html>
