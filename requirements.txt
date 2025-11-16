@@ -1,0 +1,5 @@
+# Requirements for Credit Path-AI
+
+fastapi
+uvicorn[standard]
+pydantic[email]
