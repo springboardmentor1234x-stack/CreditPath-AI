@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DEFAULT RISK PREDICTOR - About</title>
+</head>
+<body>
+
+    <header>
+        <h1>About This Project</h1>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">DRP</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="app.html" class="nav-link">Loan Application</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About the Project</a>
+                </li>
+            </ul>
+        <div class="nav-auth">
+            <a href="login.html" class="nav-link btn-login">Log In</a>
+            <a href="signup.html" class="nav-link btn-signup">Sign Up</a>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-content">
+            <h2>Project Overview</h2>
+            <p>This web application is the frontend for a full-stack loan default prediction model, built as part of an internship project.</p>
+
+            <h3>Core Components:</h3>
+            <ul>
+                <li><strong>Machine Learning Model:</strong> A tuned XGBoost classifier trained on the (Anonymize_Loan_Default_data.csv) dataset to predict the probability of default.</li>
+                <li><strong>Backend API:</strong> A FastAPI (Python) server that serves the model, handles feature engineering, and provides a "Decision Engine" to map risk scores to actions (Approve, Deny, Review).</li>
+                <li><strong>Frontend App:</strong> This (HTML, CSS, JS) website, which allows users to submit batch applications and view the model's recommendations in real-time.</li>
+            </ul>
+
+            <h3>Key Project Steps:</h3>
+            <ol>
+                <li>Data cleaning and exploration.</li>
+                <li>Fixing data leakage.</li>
+                <li>Advanced feature engineering (creating features like 'risk_weighted_debt_load').</li>
+                <li>Comparing imbalance techniques (SMOTE vs. scale_pos_weight).</li>
+                <li>Model tuning and validation (achieving a 0.71 AUC).</li>
+                <li>Deploying the model with a FastAPI backend.</li>
+                <li>Building this multi-page frontend.</li>
+            </ol>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 DEFAULT RISK PREDICTOR. All rights reserved.</p>
+        <p>Contact: pratichee-acharya</p>
+    </footer>
+    
+</body>
+</html>
