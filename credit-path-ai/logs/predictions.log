@@ -1,0 +1,1009 @@
+2025-11-08 19:42:46 - ERROR - Failed to load model package: [Errno 2] No such file or directory: '../models/credit_path_ai_model_package.pkl'
+2025-11-08 19:42:46 - ERROR - Failed to initialize predictor: [Errno 2] No such file or directory: '../models/credit_path_ai_model_package.pkl'
+2025-11-08 19:44:54 - ERROR - Failed to load model package: Can't get attribute '_RemainderColsList' on <module 'sklearn.compose._column_transformer' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\sklearn\\compose\\_column_transformer.py'>
+2025-11-08 19:44:54 - ERROR - Failed to initialize predictor: Can't get attribute '_RemainderColsList' on <module 'sklearn.compose._column_transformer' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\sklearn\\compose\\_column_transformer.py'>
+2025-11-08 19:48:41 - INFO - Model package loaded successfully
+2025-11-08 19:48:41 - INFO - Model version: 1.0
+2025-11-08 19:48:41 - INFO - Loan Default Predictor initialized successfully
+2025-11-08 19:48:41 - INFO - Credit Path AI API starting up...
+2025-11-08 19:48:41 - INFO - Model version: 1.0
+2025-11-08 19:48:41 - INFO - Model ROC AUC: 0.8898
+2025-11-08 19:50:49 - INFO - Credit Path AI API shutting down...
+2025-11-08 19:50:51 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-08 19:50:51 - INFO - Model package loaded successfully
+2025-11-08 19:50:51 - INFO - Model version: 1.0
+2025-11-08 19:50:51 - INFO - Loan Default Predictor initialized successfully
+2025-11-08 19:50:51 - INFO - Credit Path AI API starting up...
+2025-11-08 19:50:51 - INFO - Model version: 1.0
+2025-11-08 19:50:51 - INFO - Model ROC AUC: 0.8898
+2025-11-08 19:50:51 - INFO - Credit Path AI API shutting down...
+2025-11-08 19:50:55 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-08 19:50:56 - INFO - Model package loaded successfully
+2025-11-08 19:50:56 - INFO - Model version: 1.0
+2025-11-08 19:50:56 - INFO - Loan Default Predictor initialized successfully
+2025-11-08 19:50:56 - INFO - Credit Path AI API starting up...
+2025-11-08 19:50:56 - INFO - Model version: 1.0
+2025-11-08 19:50:56 - INFO - Model ROC AUC: 0.8898
+2025-11-08 19:53:10 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-08 19:53:10 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-08 19:53:10 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-08 19:53:38 - INFO - Received prediction request for loan amount: $96,500.00
+2025-11-08 19:53:38 - INFO - Prediction successful - Risk: Medium, Probability: 0.5000
+2025-11-08 19:53:38 - INFO - Prediction completed - Risk: Medium, Probability: 0.5
+2025-11-08 19:53:50 - INFO - Received prediction request for loan amount: $350,000.00
+2025-11-08 19:53:50 - INFO - Prediction successful - Risk: High, Probability: 0.9999
+2025-11-08 19:53:50 - INFO - Prediction completed - Risk: High, Probability: 0.9999
+2025-11-08 19:57:48 - INFO - Received batch prediction request for 3 applications
+2025-11-08 19:57:48 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-08 19:57:48 - INFO - Prediction successful - Risk: Medium, Probability: 0.5000
+2025-11-08 19:57:48 - INFO - Prediction successful - Risk: High, Probability: 0.9999
+2025-11-08 19:57:48 - INFO - Batch prediction successful - 3 applications processed
+2025-11-08 19:57:48 - INFO - Batch prediction completed - 3 applications processed
+2025-11-08 19:57:48 - INFO - Risk distribution: {'Low': 1, 'Medium': 1, 'High': 1}
+2025-11-08 19:58:34 - INFO - Received batch prediction request for 2 applications
+2025-11-08 19:58:34 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-08 19:58:34 - INFO - Prediction successful - Risk: Low, Probability: 0.2813
+2025-11-08 19:58:34 - INFO - Batch prediction successful - 2 applications processed
+2025-11-08 19:58:34 - INFO - Batch prediction completed - 2 applications processed
+2025-11-08 19:58:34 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-08 19:59:22 - INFO - Received batch prediction request for 5 applications
+2025-11-08 19:59:22 - INFO - Prediction successful - Risk: Low, Probability: 0.2412
+2025-11-08 19:59:22 - INFO - Prediction successful - Risk: Low, Probability: 0.2404
+2025-11-08 19:59:22 - INFO - Prediction successful - Risk: Low, Probability: 0.2666
+2025-11-08 19:59:22 - INFO - Prediction successful - Risk: High, Probability: 0.9999
+2025-11-08 19:59:22 - INFO - Prediction successful - Risk: High, Probability: 1.0000
+2025-11-08 19:59:22 - INFO - Batch prediction successful - 5 applications processed
+2025-11-08 19:59:22 - INFO - Batch prediction completed - 5 applications processed
+2025-11-08 19:59:22 - INFO - Risk distribution: {'Low': 3, 'Medium': 0, 'High': 2}
+2025-11-08 20:07:29 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-08 20:07:29 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-08 20:07:29 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-08 20:07:32 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-08 20:07:32 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-08 20:07:32 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-08 20:21:20 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-08 20:21:20 - INFO - Model package loaded successfully
+2025-11-08 20:21:20 - INFO - Model version: 1.0
+2025-11-08 20:21:20 - INFO - Loan Default Predictor initialized successfully
+2025-11-08 20:21:20 - INFO - Credit Path AI API starting up...
+2025-11-08 20:21:20 - INFO - Model version: 1.0
+2025-11-08 20:21:20 - INFO - Model ROC AUC: 0.8898
+2025-11-08 20:22:38 - INFO - Received batch prediction request for 1 applications
+2025-11-08 20:22:38 - INFO - Prediction successful - Risk: High, Probability: 0.6585
+2025-11-08 20:22:38 - INFO - Batch prediction successful - 1 applications processed
+2025-11-08 20:22:38 - INFO - Batch prediction completed - 1 applications processed
+2025-11-08 20:22:38 - INFO - Risk distribution: {'Low': 0, 'Medium': 0, 'High': 1}
+2025-11-08 20:23:29 - INFO - Received batch prediction request for 1 applications
+2025-11-08 20:23:29 - INFO - Prediction successful - Risk: High, Probability: 0.9988
+2025-11-08 20:23:29 - INFO - Batch prediction successful - 1 applications processed
+2025-11-08 20:23:29 - INFO - Batch prediction completed - 1 applications processed
+2025-11-08 20:23:29 - INFO - Risk distribution: {'Low': 0, 'Medium': 0, 'High': 1}
+2025-11-08 20:31:31 - INFO - Received batch prediction request for 1 applications
+2025-11-08 20:31:31 - INFO - Prediction successful - Risk: High, Probability: 0.7003
+2025-11-08 20:31:31 - INFO - Batch prediction successful - 1 applications processed
+2025-11-08 20:31:31 - INFO - Batch prediction completed - 1 applications processed
+2025-11-08 20:31:31 - INFO - Risk distribution: {'Low': 0, 'Medium': 0, 'High': 1}
+2025-11-08 20:36:12 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-08 20:36:13 - INFO - Model package loaded successfully
+2025-11-08 20:36:13 - INFO - Model version: 1.0
+2025-11-08 20:36:13 - INFO - Loan Default Predictor initialized successfully
+2025-11-08 20:36:13 - INFO - Credit Path AI API starting up...
+2025-11-08 20:36:13 - INFO - Model version: 1.0
+2025-11-08 20:36:13 - INFO - Model ROC AUC: 0.8898
+2025-11-08 20:36:59 - INFO - Credit Path AI API shutting down...
+2025-11-08 20:37:03 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-08 20:37:04 - INFO - Model package loaded successfully
+2025-11-08 20:37:04 - INFO - Model version: 1.0
+2025-11-08 20:37:04 - INFO - Loan Default Predictor initialized successfully
+2025-11-08 20:37:04 - INFO - Credit Path AI API starting up...
+2025-11-08 20:37:04 - INFO - Model version: 1.0
+2025-11-08 20:37:04 - INFO - Model ROC AUC: 0.8898
+2025-11-08 20:38:39 - INFO - Credit Path AI API shutting down...
+2025-11-08 20:39:08 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-08 20:39:09 - INFO - Model package loaded successfully
+2025-11-08 20:39:09 - INFO - Model version: 1.0
+2025-11-08 20:39:09 - INFO - Loan Default Predictor initialized successfully
+2025-11-08 20:39:09 - INFO - Credit Path AI API starting up...
+2025-11-08 20:39:09 - INFO - Model version: 1.0
+2025-11-08 20:39:09 - INFO - Model ROC AUC: 0.8898
+2025-11-08 20:39:13 - INFO - Received batch prediction request for 5 applications
+2025-11-08 20:39:13 - INFO - Prediction successful - Risk: Low, Probability: 0.2412
+2025-11-08 20:39:13 - INFO - Prediction successful - Risk: Low, Probability: 0.2404
+2025-11-08 20:39:13 - INFO - Prediction successful - Risk: Low, Probability: 0.2666
+2025-11-08 20:39:13 - INFO - Prediction successful - Risk: High, Probability: 0.9999
+2025-11-08 20:39:13 - INFO - Prediction successful - Risk: High, Probability: 1.0000
+2025-11-08 20:39:13 - INFO - Batch prediction successful - 5 applications processed
+2025-11-08 20:39:13 - INFO - Batch prediction completed - 5 applications processed
+2025-11-08 20:39:13 - INFO - Risk distribution: {'Low': 3, 'Medium': 0, 'High': 2}
+2025-11-08 20:39:21 - INFO - Received prediction request for loan amount: $350,000.00
+2025-11-08 20:39:21 - INFO - Prediction successful - Risk: High, Probability: 0.9999
+2025-11-08 20:39:21 - INFO - Prediction completed - Risk: High, Probability: 0.9999
+2025-11-08 20:45:19 - INFO - Received prediction request for loan amount: $20,000.00
+2025-11-08 20:45:19 - INFO - Prediction successful - Risk: Low, Probability: 0.3531
+2025-11-08 20:45:19 - INFO - Prediction completed - Risk: Low, Probability: 0.3531
+2025-11-08 20:47:33 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-08 20:47:33 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-08 20:47:33 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-08 20:50:14 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-08 20:50:14 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-08 20:50:14 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-08 20:52:05 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-08 20:52:05 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-08 20:52:05 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-08 20:52:46 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-08 20:52:46 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-08 20:52:46 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-08 20:55:47 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-08 20:55:47 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-08 20:55:47 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 17:47:55 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-09 17:47:56 - INFO - Model package loaded successfully
+2025-11-09 17:47:56 - INFO - Model version: 1.0
+2025-11-09 17:47:56 - INFO - Loan Default Predictor initialized successfully
+2025-11-09 17:47:56 - INFO - Credit Path AI API starting up...
+2025-11-09 17:47:56 - INFO - Model version: 1.0
+2025-11-09 17:47:56 - INFO - Model ROC AUC: 0.8898
+2025-11-09 17:51:29 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 17:51:29 - INFO - Prediction successful - Risk: Low, Probability: 0.2186
+2025-11-09 17:51:29 - INFO - Prediction completed - Risk: Low, Probability: 0.2186
+2025-11-09 17:52:57 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 17:52:57 - INFO - Prediction successful - Risk: Low, Probability: 0.2186
+2025-11-09 17:52:57 - INFO - Prediction completed - Risk: Low, Probability: 0.2186
+2025-11-09 17:54:06 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 17:54:06 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 17:54:06 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 17:55:17 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 17:55:18 - INFO - Prediction successful - Risk: Low, Probability: 0.2186
+2025-11-09 17:55:18 - INFO - Prediction completed - Risk: Low, Probability: 0.2186
+2025-11-09 17:56:17 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 17:56:17 - INFO - Prediction successful - Risk: Low, Probability: 0.2186
+2025-11-09 17:56:17 - INFO - Prediction completed - Risk: Low, Probability: 0.2186
+2025-11-09 17:56:56 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 17:56:57 - INFO - Prediction successful - Risk: Low, Probability: 0.2186
+2025-11-09 17:56:57 - INFO - Prediction completed - Risk: Low, Probability: 0.2186
+2025-11-09 19:47:52 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 19:47:52 - INFO - Prediction successful - Risk: Low, Probability: 0.2186
+2025-11-09 19:47:52 - INFO - Prediction completed - Risk: Low, Probability: 0.2186
+2025-11-09 19:52:56 - INFO - Received prediction request for loan amount: $20,000.00
+2025-11-09 19:52:56 - INFO - Prediction successful - Risk: Low, Probability: 0.3677
+2025-11-09 19:52:56 - INFO - Prediction completed - Risk: Low, Probability: 0.3677
+2025-11-09 19:57:28 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 19:57:28 - INFO - Prediction successful - Risk: Low, Probability: 0.2186
+2025-11-09 19:57:28 - INFO - Prediction completed - Risk: Low, Probability: 0.2186
+2025-11-09 20:16:00 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:16:00 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:16:00 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:16:12 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:16:12 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:16:12 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:16:23 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:16:23 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:16:23 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:17:36 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:17:36 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:17:36 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:21:06 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:21:06 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:21:06 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:21:08 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:21:08 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:21:08 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:21:09 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:21:10 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:21:10 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:21:10 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:21:10 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:21:10 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:21:12 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:21:12 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:21:12 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:21:13 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:21:13 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:21:13 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:21:14 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:21:14 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:21:14 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:24:30 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:24:30 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:24:30 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:24:53 - INFO - Credit Path AI API shutting down...
+2025-11-09 20:26:03 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-09 20:26:04 - INFO - Model package loaded successfully
+2025-11-09 20:26:04 - INFO - Model version: 1.0
+2025-11-09 20:26:04 - INFO - Loan Default Predictor initialized successfully
+2025-11-09 20:26:04 - INFO - Credit Path AI API starting up...
+2025-11-09 20:26:04 - INFO - Model version: 1.0
+2025-11-09 20:26:04 - INFO - Model ROC AUC: 0.8898
+2025-11-09 20:26:13 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:26:13 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:26:13 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:27:34 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:27:34 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:27:34 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:28:38 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:28:38 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:28:38 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:28:39 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:28:39 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:28:39 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:28:40 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:28:40 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:28:40 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:28:46 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:28:46 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:28:46 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:30:19 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:30:19 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:30:19 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:31:13 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:31:13 - INFO - Prediction successful - Risk: Low, Probability: 0.2713
+2025-11-09 20:31:13 - INFO - Prediction completed - Risk: Low, Probability: 0.2713
+2025-11-09 20:31:14 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:31:14 - INFO - Prediction successful - Risk: Low, Probability: 0.2713
+2025-11-09 20:31:14 - INFO - Prediction completed - Risk: Low, Probability: 0.2713
+2025-11-09 20:31:15 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:31:15 - INFO - Prediction successful - Risk: Low, Probability: 0.2713
+2025-11-09 20:31:15 - INFO - Prediction completed - Risk: Low, Probability: 0.2713
+2025-11-09 20:35:20 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:35:20 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:35:20 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:35:21 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:35:21 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:35:21 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:35:23 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:35:23 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:35:23 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:35:23 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:35:23 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:35:23 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:35:23 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:35:23 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:35:23 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:35:24 - INFO - Received prediction request for loan amount: $250,000.00
+2025-11-09 20:35:24 - INFO - Prediction successful - Risk: Low, Probability: 0.1921
+2025-11-09 20:35:24 - INFO - Prediction completed - Risk: Low, Probability: 0.1921
+2025-11-09 20:46:59 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 20:46:59 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 20:46:59 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 20:47:00 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 20:47:00 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 20:47:00 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 20:47:01 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 20:47:01 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 20:47:01 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 20:47:09 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 20:47:09 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 20:47:09 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 20:53:51 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 20:53:51 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 20:53:51 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 20:57:03 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 20:57:03 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 20:57:03 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 20:58:23 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 20:58:24 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 20:58:24 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 20:58:28 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 20:58:28 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 20:58:28 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:08:12 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:08:12 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:08:12 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:08:13 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:08:13 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:08:13 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:08:51 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:08:51 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:08:51 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:12:17 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:12:17 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:12:17 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:13:25 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:13:26 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:13:26 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:14:17 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:14:17 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:14:17 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:14:17 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:14:17 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:14:17 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:14:37 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:14:37 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:14:37 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:14:37 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:14:37 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:14:37 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:15:49 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:15:49 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:15:49 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:18:53 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:18:53 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:18:53 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:25:14 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:25:14 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:25:14 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:27:38 - INFO - Credit Path AI API shutting down...
+2025-11-09 21:27:43 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-09 21:27:44 - INFO - Model package loaded successfully
+2025-11-09 21:27:44 - INFO - Model version: 1.0
+2025-11-09 21:27:44 - INFO - Loan Default Predictor initialized successfully
+2025-11-09 21:27:44 - INFO - Credit Path AI API starting up...
+2025-11-09 21:27:44 - INFO - Model version: 1.0
+2025-11-09 21:27:44 - INFO - Model ROC AUC: 0.8898
+2025-11-09 21:30:12 - INFO - Received prediction request for loan amount: $2,000,000.00
+2025-11-09 21:30:12 - INFO - Prediction successful - Risk: Medium, Probability: 0.5796
+2025-11-09 21:30:12 - INFO - Prediction completed - Risk: Medium, Probability: 0.5796
+2025-11-09 21:32:16 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:32:16 - INFO - Prediction successful - Risk: Low, Probability: 0.2681
+2025-11-09 21:32:16 - INFO - Prediction completed - Risk: Low, Probability: 0.2681
+2025-11-09 21:32:53 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:32:53 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:32:53 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:34:16 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:34:16 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:34:16 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:34:46 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:34:46 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:34:46 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:36:15 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:36:15 - INFO - Prediction successful - Risk: Low, Probability: 0.2681
+2025-11-09 21:36:15 - INFO - Prediction completed - Risk: Low, Probability: 0.2681
+2025-11-09 21:37:57 - INFO - Received prediction request for loan amount: $2,000,000.00
+2025-11-09 21:37:57 - INFO - Prediction successful - Risk: High, Probability: 0.9639
+2025-11-09 21:37:57 - INFO - Prediction completed - Risk: High, Probability: 0.9639
+2025-11-09 21:38:23 - INFO - Received prediction request for loan amount: $2,000,000.00
+2025-11-09 21:38:23 - INFO - Prediction successful - Risk: High, Probability: 0.9644
+2025-11-09 21:38:23 - INFO - Prediction completed - Risk: High, Probability: 0.9644
+2025-11-09 21:39:45 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:39:45 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:39:45 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:42:26 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:42:26 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:42:26 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:46:54 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:46:54 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:46:54 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:46:56 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:46:56 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:46:56 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:47:06 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:47:06 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:47:06 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:47:33 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:47:33 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:47:33 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:48:58 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:48:58 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:48:58 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:49:48 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:49:48 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:49:48 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:49:54 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:49:54 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:49:54 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:55:04 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:55:05 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:55:05 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 21:59:36 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 21:59:36 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 21:59:36 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:00:29 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:00:29 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:00:29 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:02:20 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:02:20 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:02:20 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:02:20 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:02:20 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:02:20 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:02:42 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:02:42 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:02:42 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:02:42 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:02:42 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:02:42 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:04:18 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:04:18 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:04:18 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:04:25 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:04:25 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:04:25 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:04:41 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:04:41 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:04:41 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:05:17 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:05:17 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:05:17 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:06:20 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:06:20 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:06:20 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:09:39 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:09:39 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:09:39 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:10:02 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:10:02 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:10:02 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:27:22 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-09 22:27:24 - INFO - Model package loaded successfully
+2025-11-09 22:27:24 - INFO - Model version: 1.0
+2025-11-09 22:27:24 - INFO - Loan Default Predictor initialized successfully
+2025-11-09 22:27:24 - INFO - Credit Path AI API starting up...
+2025-11-09 22:27:24 - INFO - Model version: 1.0
+2025-11-09 22:27:24 - INFO - Model ROC AUC: 0.8898
+2025-11-09 22:30:53 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:30:53 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:30:53 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:30:55 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:30:55 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:30:55 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:31:08 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:31:08 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:31:08 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:38:22 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:38:22 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:38:22 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:38:25 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:38:25 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:38:25 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:40:18 - INFO - Credit Path AI API shutting down...
+2025-11-09 22:40:24 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-09 22:40:25 - INFO - Model package loaded successfully
+2025-11-09 22:40:25 - INFO - Model version: 1.0
+2025-11-09 22:40:25 - INFO - Loan Default Predictor initialized successfully
+2025-11-09 22:40:25 - INFO - Credit Path AI API starting up...
+2025-11-09 22:40:25 - INFO - Model version: 1.0
+2025-11-09 22:40:25 - INFO - Model ROC AUC: 0.8898
+2025-11-09 22:40:37 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:40:37 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:40:37 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:40:50 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:40:50 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:40:50 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:40:51 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:40:51 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:40:51 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:42:16 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:42:16 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:42:16 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:49:03 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:49:03 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:49:03 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:49:04 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:49:04 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:49:04 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:49:05 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:49:05 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:49:05 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:50:26 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 22:50:26 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 22:50:27 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-09 22:50:32 - INFO - Credit Path AI API shutting down...
+2025-11-09 23:01:34 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-09 23:01:35 - INFO - Model package loaded successfully
+2025-11-09 23:01:35 - INFO - Model version: 1.0
+2025-11-09 23:01:35 - INFO - Loan Default Predictor initialized successfully
+2025-11-09 23:01:35 - INFO - Credit Path AI API starting up...
+2025-11-09 23:01:35 - INFO - Model version: 1.0
+2025-11-09 23:01:35 - INFO - Model ROC AUC: 0.8898
+2025-11-09 23:02:30 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-09 23:02:30 - INFO - Prediction successful - Risk: High, Probability: 0.9968
+2025-11-09 23:02:30 - INFO - Prediction completed - Risk: High, Probability: 0.9968
+2025-11-09 23:07:32 - INFO - Credit Path AI API shutting down...
+2025-11-09 23:07:38 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-09 23:07:39 - INFO - Model package loaded successfully
+2025-11-09 23:07:39 - INFO - Model version: 1.0
+2025-11-09 23:07:39 - INFO - Loan Default Predictor initialized successfully
+2025-11-09 23:07:39 - INFO - Credit Path AI API starting up...
+2025-11-09 23:07:39 - INFO - Model version: 1.0
+2025-11-09 23:07:39 - INFO - Model ROC AUC: 0.8898
+2025-11-09 23:07:58 - INFO - Received batch prediction request for 1 applications
+2025-11-09 23:07:58 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 23:07:58 - INFO - Batch prediction successful - 1 applications processed
+2025-11-09 23:07:58 - INFO - Batch prediction completed - 1 applications processed
+2025-11-09 23:07:58 - INFO - Risk distribution: {'Low': 1, 'Medium': 0, 'High': 0}
+2025-11-09 23:08:17 - INFO - Received batch prediction request for 1 applications
+2025-11-09 23:08:17 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 23:08:17 - INFO - Batch prediction successful - 1 applications processed
+2025-11-09 23:08:17 - INFO - Batch prediction completed - 1 applications processed
+2025-11-09 23:08:17 - INFO - Risk distribution: {'Low': 1, 'Medium': 0, 'High': 0}
+2025-11-09 23:08:22 - INFO - Received batch prediction request for 1 applications
+2025-11-09 23:08:22 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 23:08:22 - INFO - Batch prediction successful - 1 applications processed
+2025-11-09 23:08:22 - INFO - Batch prediction completed - 1 applications processed
+2025-11-09 23:08:22 - INFO - Risk distribution: {'Low': 1, 'Medium': 0, 'High': 0}
+2025-11-09 23:14:29 - INFO - Received batch prediction request for 2 applications
+2025-11-09 23:14:29 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 23:14:29 - INFO - Prediction successful - Risk: High, Probability: 0.9971
+2025-11-09 23:14:29 - INFO - Batch prediction successful - 2 applications processed
+2025-11-09 23:14:29 - INFO - Batch prediction completed - 2 applications processed
+2025-11-09 23:14:29 - INFO - Risk distribution: {'Low': 1, 'Medium': 0, 'High': 1}
+2025-11-09 23:21:29 - INFO - Received batch prediction request for 2 applications
+2025-11-09 23:21:29 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 23:21:29 - INFO - Prediction successful - Risk: High, Probability: 0.9971
+2025-11-09 23:21:29 - INFO - Batch prediction successful - 2 applications processed
+2025-11-09 23:21:29 - INFO - Batch prediction completed - 2 applications processed
+2025-11-09 23:21:29 - INFO - Risk distribution: {'Low': 1, 'Medium': 0, 'High': 1}
+2025-11-09 23:21:36 - INFO - Received batch prediction request for 2 applications
+2025-11-09 23:21:36 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-09 23:21:36 - INFO - Prediction successful - Risk: High, Probability: 0.9971
+2025-11-09 23:21:36 - INFO - Batch prediction successful - 2 applications processed
+2025-11-09 23:21:36 - INFO - Batch prediction completed - 2 applications processed
+2025-11-09 23:21:36 - INFO - Risk distribution: {'Low': 1, 'Medium': 0, 'High': 1}
+2025-11-09 23:34:17 - INFO - Credit Path AI API shutting down...
+2025-11-10 07:28:26 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-10 07:28:28 - INFO - Model package loaded successfully
+2025-11-10 07:28:28 - INFO - Model version: 1.0
+2025-11-10 07:28:28 - INFO - Loan Default Predictor initialized successfully
+2025-11-10 07:28:28 - INFO - Credit Path AI API starting up...
+2025-11-10 07:28:28 - INFO - Model version: 1.0
+2025-11-10 07:28:28 - INFO - Model ROC AUC: 0.8898
+2025-11-10 07:28:38 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-10 07:28:38 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 07:28:38 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-10 11:29:20 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-10 11:29:21 - INFO - Model package loaded successfully
+2025-11-10 11:29:21 - INFO - Model version: 1.0
+2025-11-10 11:29:21 - INFO - Loan Default Predictor initialized successfully
+2025-11-10 11:29:21 - INFO - Credit Path AI API starting up...
+2025-11-10 11:29:21 - INFO - Model version: 1.0
+2025-11-10 11:29:21 - INFO - Model ROC AUC: 0.8898
+2025-11-10 11:30:47 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-10 11:30:47 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 11:30:47 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-10 18:07:23 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-10 18:07:24 - ERROR - Failed to load model package: No module named 'numpy._core'
+2025-11-10 18:07:24 - ERROR - Failed to initialize predictor: No module named 'numpy._core'
+2025-11-10 18:07:42 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-10 18:07:43 - ERROR - Failed to load model package: No module named 'numpy._core'
+2025-11-10 18:07:43 - ERROR - Failed to initialize predictor: No module named 'numpy._core'
+2025-11-10 18:08:19 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-10 18:08:20 - ERROR - Failed to load model package: No module named 'numpy._core'
+2025-11-10 18:08:20 - ERROR - Failed to initialize predictor: No module named 'numpy._core'
+2025-11-10 18:09:13 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-10 18:09:13 - ERROR - Failed to load model package: No module named 'numpy._core'
+2025-11-10 18:09:13 - ERROR - Failed to initialize predictor: No module named 'numpy._core'
+2025-11-10 18:17:37 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-10 18:17:38 - INFO - Model package loaded successfully
+2025-11-10 18:17:38 - INFO - Model version: 1.0
+2025-11-10 18:17:38 - INFO - Loan Default Predictor initialized successfully
+2025-11-10 18:17:38 - INFO - Credit Path AI API starting up...
+2025-11-10 18:17:38 - INFO - Model version: 1.0
+2025-11-10 18:17:38 - INFO - Model ROC AUC: 0.8898
+2025-11-10 18:18:45 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-10 18:18:46 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 18:18:46 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-10 18:41:54 - INFO - Credit Path AI API shutting down...
+2025-11-10 19:20:00 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-10 19:20:01 - INFO - Model package loaded successfully
+2025-11-10 19:20:01 - INFO - Model version: 1.0
+2025-11-10 19:20:01 - INFO - Loan Default Predictor initialized successfully
+2025-11-10 19:20:01 - INFO - Credit Path AI API starting up...
+2025-11-10 19:20:01 - INFO - Model version: 1.0
+2025-11-10 19:20:01 - INFO - Model ROC AUC: 0.8898
+2025-11-10 19:28:16 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-10 19:28:16 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 19:28:16 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-10 19:38:25 - INFO - Received prediction request for loan amount: $350,000.00
+2025-11-10 19:38:25 - INFO - Prediction successful - Risk: High, Probability: 0.9999
+2025-11-10 19:38:25 - INFO - Prediction completed - Risk: High, Probability: 0.9999
+2025-11-10 19:48:09 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-10 19:48:09 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 19:48:09 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-10 19:48:54 - INFO - Credit Path AI API shutting down...
+2025-11-10 21:52:53 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-10 21:52:54 - INFO - Model package loaded successfully
+2025-11-10 21:52:54 - INFO - Model version: 1.0
+2025-11-10 21:52:54 - INFO - Loan Default Predictor initialized successfully
+2025-11-10 21:52:54 - INFO - Credit Path AI API starting up...
+2025-11-10 21:52:54 - INFO - Model version: 1.0
+2025-11-10 21:52:54 - INFO - Model ROC AUC: 0.8898
+2025-11-10 22:15:42 - INFO - Received batch prediction request for 1 applications
+2025-11-10 22:15:42 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 22:15:42 - INFO - Batch prediction successful - 1 applications processed
+2025-11-10 22:15:42 - INFO - Batch prediction completed - 1 applications processed
+2025-11-10 22:15:42 - INFO - Risk distribution: {'Low': 1, 'Medium': 0, 'High': 0}
+2025-11-10 22:16:19 - INFO - Received batch prediction request for 2 applications
+2025-11-10 22:16:19 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 22:16:19 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 22:16:19 - INFO - Batch prediction successful - 2 applications processed
+2025-11-10 22:16:19 - INFO - Batch prediction completed - 2 applications processed
+2025-11-10 22:16:19 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-10 22:21:25 - INFO - Received batch prediction request for 1 applications
+2025-11-10 22:21:25 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 22:21:25 - INFO - Batch prediction successful - 1 applications processed
+2025-11-10 22:21:25 - INFO - Batch prediction completed - 1 applications processed
+2025-11-10 22:21:25 - INFO - Risk distribution: {'Low': 1, 'Medium': 0, 'High': 0}
+2025-11-10 22:40:37 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-10 22:40:37 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 22:40:37 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-10 22:40:49 - INFO - Received batch prediction request for 2 applications
+2025-11-10 22:40:49 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 22:40:49 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 22:40:49 - INFO - Batch prediction successful - 2 applications processed
+2025-11-10 22:40:49 - INFO - Batch prediction completed - 2 applications processed
+2025-11-10 22:40:49 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-10 22:41:13 - INFO - Received batch prediction request for 2 applications
+2025-11-10 22:41:13 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 22:41:13 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 22:41:13 - INFO - Batch prediction successful - 2 applications processed
+2025-11-10 22:41:13 - INFO - Batch prediction completed - 2 applications processed
+2025-11-10 22:41:13 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-10 22:46:22 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-10 22:46:22 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 22:46:22 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-10 22:46:33 - INFO - Received batch prediction request for 2 applications
+2025-11-10 22:46:33 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 22:46:33 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 22:46:33 - INFO - Batch prediction successful - 2 applications processed
+2025-11-10 22:46:33 - INFO - Batch prediction completed - 2 applications processed
+2025-11-10 22:46:33 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-10 22:49:38 - INFO - Credit Path AI API shutting down...
+2025-11-10 22:52:55 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-10 22:52:57 - INFO - Model package loaded successfully
+2025-11-10 22:52:57 - INFO - Model version: 1.0
+2025-11-10 22:52:57 - INFO - Loan Default Predictor initialized successfully
+2025-11-10 22:52:57 - INFO - Credit Path AI API starting up...
+2025-11-10 22:52:57 - INFO - Model version: 1.0
+2025-11-10 22:52:57 - INFO - Model ROC AUC: 0.8898
+2025-11-10 22:56:04 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-10 22:56:04 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 22:56:04 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-10 22:56:35 - INFO - Received batch prediction request for 3 applications
+2025-11-10 22:56:36 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 22:56:36 - INFO - Prediction successful - Risk: High, Probability: 0.8718
+2025-11-10 22:56:36 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 22:56:36 - INFO - Batch prediction successful - 3 applications processed
+2025-11-10 22:56:36 - INFO - Batch prediction completed - 3 applications processed
+2025-11-10 22:56:36 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 1}
+2025-11-10 23:01:27 - INFO - Received batch prediction request for 2 applications
+2025-11-10 23:01:27 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 23:01:27 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 23:01:27 - INFO - Batch prediction successful - 2 applications processed
+2025-11-10 23:01:27 - INFO - Batch prediction completed - 2 applications processed
+2025-11-10 23:01:27 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-10 23:07:21 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-10 23:07:21 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 23:07:21 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-10 23:07:36 - INFO - Received batch prediction request for 2 applications
+2025-11-10 23:07:36 - INFO - Prediction successful - Risk: Low, Probability: 0.2259
+2025-11-10 23:07:36 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 23:07:36 - INFO - Batch prediction successful - 2 applications processed
+2025-11-10 23:07:36 - INFO - Batch prediction completed - 2 applications processed
+2025-11-10 23:07:36 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-10 23:37:20 - INFO - Received batch prediction request for 2 applications
+2025-11-10 23:37:21 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 23:37:21 - INFO - Prediction successful - Risk: Low, Probability: 0.3413
+2025-11-10 23:37:21 - INFO - Batch prediction successful - 2 applications processed
+2025-11-10 23:37:21 - INFO - Batch prediction completed - 2 applications processed
+2025-11-10 23:37:21 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-10 23:37:47 - INFO - Received batch prediction request for 2 applications
+2025-11-10 23:37:47 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 23:37:47 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 23:37:47 - INFO - Batch prediction successful - 2 applications processed
+2025-11-10 23:37:47 - INFO - Batch prediction completed - 2 applications processed
+2025-11-10 23:37:47 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-10 23:42:47 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-10 23:42:47 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 23:42:47 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-10 23:43:04 - INFO - Received batch prediction request for 2 applications
+2025-11-10 23:43:04 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 23:43:04 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 23:43:04 - INFO - Batch prediction successful - 2 applications processed
+2025-11-10 23:43:04 - INFO - Batch prediction completed - 2 applications processed
+2025-11-10 23:43:04 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-10 23:43:32 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-10 23:43:32 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 23:43:32 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-10 23:43:51 - INFO - Received batch prediction request for 2 applications
+2025-11-10 23:43:51 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 23:43:51 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-10 23:43:51 - INFO - Batch prediction successful - 2 applications processed
+2025-11-10 23:43:51 - INFO - Batch prediction completed - 2 applications processed
+2025-11-10 23:43:51 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-11 18:55:47 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-11 18:55:48 - ERROR - Failed to load model package: No module named 'numpy._core'
+2025-11-11 18:55:48 - ERROR - Failed to initialize predictor: No module named 'numpy._core'
+2025-11-11 18:56:12 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-11 18:56:13 - INFO - Model package loaded successfully
+2025-11-11 18:56:13 - INFO - Model version: 1.0
+2025-11-11 18:56:13 - INFO - Loan Default Predictor initialized successfully
+2025-11-11 18:56:13 - INFO - Credit Path AI API starting up...
+2025-11-11 18:56:13 - INFO - Model version: 1.0
+2025-11-11 18:56:13 - INFO - Model ROC AUC: 0.8898
+2025-11-11 18:57:31 - INFO - Credit Path AI API shutting down...
+2025-11-11 18:57:36 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-11 18:57:37 - INFO - Model package loaded successfully
+2025-11-11 18:57:37 - INFO - Model version: 1.0
+2025-11-11 18:57:37 - INFO - Loan Default Predictor initialized successfully
+2025-11-11 18:57:37 - INFO - Credit Path AI API starting up...
+2025-11-11 18:57:37 - INFO - Model version: 1.0
+2025-11-11 18:57:37 - INFO - Model ROC AUC: 0.8898
+2025-11-11 18:57:41 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-11 18:57:41 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-11 18:57:41 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-11 18:57:52 - INFO - Received prediction request for loan amount: $350,000.00
+2025-11-11 18:57:52 - INFO - Prediction successful - Risk: High, Probability: 0.9999
+2025-11-11 18:57:52 - INFO - Prediction completed - Risk: High, Probability: 0.9999
+2025-11-11 18:57:55 - INFO - Received batch prediction request for 5 applications
+2025-11-11 18:57:55 - INFO - Prediction successful - Risk: Low, Probability: 0.2412
+2025-11-11 18:57:55 - INFO - Prediction successful - Risk: Low, Probability: 0.2404
+2025-11-11 18:57:55 - INFO - Prediction successful - Risk: Low, Probability: 0.2666
+2025-11-11 18:57:55 - INFO - Prediction successful - Risk: High, Probability: 0.9999
+2025-11-11 18:57:55 - INFO - Prediction successful - Risk: High, Probability: 1.0000
+2025-11-11 18:57:55 - INFO - Batch prediction successful - 5 applications processed
+2025-11-11 18:57:55 - INFO - Batch prediction completed - 5 applications processed
+2025-11-11 18:57:55 - INFO - Risk distribution: {'Low': 3, 'Medium': 0, 'High': 2}
+2025-11-11 19:14:07 - INFO - Received prediction request for loan amount: $350,000.00
+2025-11-11 19:14:07 - INFO - Prediction successful - Risk: High, Probability: 0.9999
+2025-11-11 19:14:07 - INFO - Prediction completed - Risk: High, Probability: 0.9999
+2025-11-13 17:35:09 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-13 17:35:09 - ERROR - Failed to load model package: No module named 'numpy._core'
+2025-11-13 17:35:09 - ERROR - Failed to initialize predictor: No module named 'numpy._core'
+2025-11-13 17:38:21 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-13 17:38:22 - INFO - Model package loaded successfully
+2025-11-13 17:38:22 - INFO - Model version: 1.0
+2025-11-13 17:38:22 - INFO - Loan Default Predictor initialized successfully
+2025-11-13 17:38:22 - INFO - Credit Path AI API starting up...
+2025-11-13 17:38:22 - INFO - Model version: 1.0
+2025-11-13 17:38:22 - INFO - Model ROC AUC: 0.8898
+2025-11-13 17:39:05 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-13 17:39:05 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 17:39:05 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-13 17:39:25 - INFO - Received batch prediction request for 2 applications
+2025-11-13 17:39:25 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 17:39:25 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 17:39:25 - INFO - Batch prediction successful - 2 applications processed
+2025-11-13 17:39:25 - INFO - Batch prediction completed - 2 applications processed
+2025-11-13 17:39:25 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-13 17:39:49 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-13 17:39:49 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 17:39:49 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-13 17:40:49 - INFO - Received batch prediction request for 3 applications
+2025-11-13 17:40:49 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 17:40:49 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 17:40:49 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 17:40:49 - INFO - Batch prediction successful - 3 applications processed
+2025-11-13 17:40:49 - INFO - Batch prediction completed - 3 applications processed
+2025-11-13 17:40:49 - INFO - Risk distribution: {'Low': 3, 'Medium': 0, 'High': 0}
+2025-11-13 17:50:42 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-13 17:50:42 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 17:50:42 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-13 17:51:10 - INFO - Received batch prediction request for 2 applications
+2025-11-13 17:51:10 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 17:51:10 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 17:51:10 - INFO - Batch prediction successful - 2 applications processed
+2025-11-13 17:51:10 - INFO - Batch prediction completed - 2 applications processed
+2025-11-13 17:51:10 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-13 17:51:28 - INFO - Received batch prediction request for 2 applications
+2025-11-13 17:51:28 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 17:51:28 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 17:51:28 - INFO - Batch prediction successful - 2 applications processed
+2025-11-13 17:51:28 - INFO - Batch prediction completed - 2 applications processed
+2025-11-13 17:51:28 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-13 17:56:01 - INFO - Received batch prediction request for 2 applications
+2025-11-13 17:56:02 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 17:56:02 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 17:56:02 - INFO - Batch prediction successful - 2 applications processed
+2025-11-13 17:56:02 - INFO - Batch prediction completed - 2 applications processed
+2025-11-13 17:56:02 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-13 18:00:14 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-13 18:00:14 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 18:00:14 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-13 18:11:51 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-13 18:11:51 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 18:11:51 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-13 18:41:40 - INFO - Credit Path AI API shutting down...
+2025-11-13 18:42:11 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-13 18:42:12 - INFO - Model package loaded successfully
+2025-11-13 18:42:12 - INFO - Model version: 1.0
+2025-11-13 18:42:12 - INFO - Loan Default Predictor initialized successfully
+2025-11-13 18:42:20 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-13 18:42:21 - INFO - Model package loaded successfully
+2025-11-13 18:42:21 - INFO - Model version: 1.0
+2025-11-13 18:42:21 - INFO - Loan Default Predictor initialized successfully
+2025-11-13 18:42:21 - INFO - Credit Path AI API starting up...
+2025-11-13 18:42:21 - INFO - Model version: 1.0
+2025-11-13 18:42:21 - INFO - Model ROC AUC: 0.8898
+2025-11-13 18:42:46 - INFO - Credit Path AI API shutting down...
+2025-11-13 18:42:53 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-13 18:42:54 - INFO - Model package loaded successfully
+2025-11-13 18:42:54 - INFO - Model version: 1.0
+2025-11-13 18:42:54 - INFO - Loan Default Predictor initialized successfully
+2025-11-13 18:42:54 - INFO - Credit Path AI API starting up...
+2025-11-13 18:42:54 - INFO - Model version: 1.0
+2025-11-13 18:42:54 - INFO - Model ROC AUC: 0.8898
+2025-11-13 18:43:44 - INFO - Credit Path AI API shutting down...
+2025-11-13 18:43:48 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-13 18:43:50 - INFO - Model package loaded successfully
+2025-11-13 18:43:50 - INFO - Model version: 1.0
+2025-11-13 18:43:50 - INFO - Loan Default Predictor initialized successfully
+2025-11-13 18:43:50 - INFO - Credit Path AI API starting up...
+2025-11-13 18:43:50 - INFO - Model version: 1.0
+2025-11-13 18:43:50 - INFO - Model ROC AUC: 0.8898
+2025-11-13 18:47:27 - INFO - Credit Path AI API shutting down...
+2025-11-13 18:47:30 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-13 18:47:32 - INFO - Model package loaded successfully
+2025-11-13 18:47:32 - INFO - Model version: 1.0
+2025-11-13 18:47:32 - INFO - Loan Default Predictor initialized successfully
+2025-11-13 18:47:32 - INFO - Credit Path AI API starting up...
+2025-11-13 18:47:32 - INFO - Model version: 1.0
+2025-11-13 18:47:32 - INFO - Model ROC AUC: 0.8898
+2025-11-13 18:47:32 - INFO - Credit Path AI API shutting down...
+2025-11-13 18:47:37 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-13 18:47:39 - INFO - Model package loaded successfully
+2025-11-13 18:47:39 - INFO - Model version: 1.0
+2025-11-13 18:47:39 - INFO - Loan Default Predictor initialized successfully
+2025-11-13 18:47:39 - INFO - Credit Path AI API starting up...
+2025-11-13 18:47:39 - INFO - Model version: 1.0
+2025-11-13 18:47:39 - INFO - Model ROC AUC: 0.8898
+2025-11-13 18:47:58 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-13 18:47:58 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 18:47:58 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-13 18:48:08 - INFO - Received batch prediction request for 2 applications
+2025-11-13 18:48:08 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 18:48:08 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-13 18:48:08 - INFO - Batch prediction successful - 2 applications processed
+2025-11-13 18:48:08 - INFO - Batch prediction completed - 2 applications processed
+2025-11-13 18:48:08 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-13 18:52:25 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\credit-path-ai\backend\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-11-13 18:52:25 - ERROR - Unhandled exception: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+2025-11-13 18:57:35 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\credit-path-ai\backend\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-11-13 18:57:35 - ERROR - Unhandled exception: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+2025-11-13 19:00:21 - INFO - Credit Path AI API shutting down...
+2025-11-13 19:01:25 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-13 19:01:26 - INFO - Model package loaded successfully
+2025-11-13 19:01:26 - INFO - Model version: 1.0
+2025-11-13 19:01:26 - INFO - Loan Default Predictor initialized successfully
+2025-11-13 19:01:26 - INFO - Credit Path AI API starting up...
+2025-11-13 19:01:26 - INFO - Model version: 1.0
+2025-11-13 19:01:26 - INFO - Model ROC AUC: 0.8898
+2025-11-13 19:01:32 - INFO - New user registered: testuser
+2025-11-13 19:03:15 - INFO - User logged in: testuser
+2025-11-13 19:04:37 - INFO - Received prediction request for loan amount: $350,000.00
+2025-11-13 19:04:37 - INFO - Prediction successful - Risk: High, Probability: 0.9999
+2025-11-13 19:04:37 - INFO - Prediction completed - Risk: High, Probability: 0.9999
+2025-11-13 19:04:54 - INFO - Received prediction request for loan amount: $350,000.00
+2025-11-13 19:04:54 - INFO - Prediction successful - Risk: High, Probability: 0.9999
+2025-11-13 19:04:54 - INFO - Prediction completed - Risk: High, Probability: 0.9999
+2025-11-13 19:11:02 - INFO - Credit Path AI API shutting down...
+2025-11-13 19:11:05 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-13 19:11:06 - INFO - Model package loaded successfully
+2025-11-13 19:11:06 - INFO - Model version: 1.0
+2025-11-13 19:11:06 - INFO - Loan Default Predictor initialized successfully
+2025-11-13 19:11:06 - INFO - Credit Path AI API starting up...
+2025-11-13 19:11:06 - INFO - Model version: 1.0
+2025-11-13 19:11:06 - INFO - Model ROC AUC: 0.8898
+2025-11-13 19:11:06 - INFO - Credit Path AI API shutting down...
+2025-11-13 19:11:11 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-13 19:11:12 - INFO - Model package loaded successfully
+2025-11-13 19:11:12 - INFO - Model version: 1.0
+2025-11-13 19:11:12 - INFO - Loan Default Predictor initialized successfully
+2025-11-13 19:11:12 - INFO - Credit Path AI API starting up...
+2025-11-13 19:11:12 - INFO - Model version: 1.0
+2025-11-13 19:11:12 - INFO - Model ROC AUC: 0.8898
+2025-11-13 19:11:26 - INFO - Received prediction request for loan amount: $350,000.00
+2025-11-13 19:11:26 - INFO - Prediction successful - Risk: High, Probability: 0.9999
+2025-11-13 19:11:26 - INFO - Prediction completed - Risk: High, Probability: 0.9999
+2025-11-13 19:11:59 - INFO - Received batch prediction request for 5 applications
+2025-11-13 19:11:59 - INFO - Prediction successful - Risk: Low, Probability: 0.2412
+2025-11-13 19:11:59 - INFO - Prediction successful - Risk: Low, Probability: 0.2404
+2025-11-13 19:11:59 - INFO - Prediction successful - Risk: Low, Probability: 0.2666
+2025-11-13 19:11:59 - INFO - Prediction successful - Risk: High, Probability: 0.9999
+2025-11-13 19:11:59 - INFO - Prediction successful - Risk: High, Probability: 1.0000
+2025-11-13 19:11:59 - INFO - Batch prediction successful - 5 applications processed
+2025-11-13 19:11:59 - INFO - Batch prediction completed - 5 applications processed
+2025-11-13 19:11:59 - INFO - Risk distribution: {'Low': 3, 'Medium': 0, 'High': 2}
+2025-11-13 19:20:16 - INFO - Credit Path AI API shutting down...
+2025-11-13 19:27:05 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-13 19:27:07 - INFO - Model package loaded successfully
+2025-11-13 19:27:07 - INFO - Model version: 1.0
+2025-11-13 19:27:07 - INFO - Loan Default Predictor initialized successfully
+2025-11-13 19:27:07 - INFO - Credit Path AI API starting up...
+2025-11-13 19:27:07 - INFO - Model version: 1.0
+2025-11-13 19:27:07 - INFO - Model ROC AUC: 0.8898
+2025-11-13 23:39:02 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-13 23:39:04 - INFO - Model package loaded successfully
+2025-11-13 23:39:04 - INFO - Model version: 1.0
+2025-11-13 23:39:04 - INFO - Loan Default Predictor initialized successfully
+2025-11-13 23:39:04 - INFO - Credit Path AI API starting up...
+2025-11-13 23:39:04 - INFO - Model version: 1.0
+2025-11-13 23:39:04 - INFO - Model ROC AUC: 0.8898
+2025-11-13 23:47:20 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-13 23:47:21 - INFO - Model package loaded successfully
+2025-11-13 23:47:21 - INFO - Model version: 1.0
+2025-11-13 23:47:21 - INFO - Loan Default Predictor initialized successfully
+2025-11-13 23:47:21 - INFO - Credit Path AI API starting up...
+2025-11-13 23:47:21 - INFO - Model version: 1.0
+2025-11-13 23:47:21 - INFO - Model ROC AUC: 0.8898
+2025-11-13 23:59:38 - INFO - Credit Path AI API shutting down...
+2025-11-14 00:00:03 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-14 00:00:03 - INFO - Model package loaded successfully
+2025-11-14 00:00:03 - INFO - Model version: 1.0
+2025-11-14 00:00:03 - INFO - Loan Default Predictor initialized successfully
+2025-11-14 00:00:03 - INFO - Credit Path AI API starting up...
+2025-11-14 00:00:03 - INFO - Model version: 1.0
+2025-11-14 00:00:03 - INFO - Model ROC AUC: 0.8898
+2025-11-14 00:03:48 - INFO - User logged in: testuser
+2025-11-14 00:03:54 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-14 00:03:54 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-14 00:03:54 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-14 00:04:02 - INFO - Received batch prediction request for 2 applications
+2025-11-14 00:04:02 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-14 00:04:02 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-14 00:04:02 - INFO - Batch prediction successful - 2 applications processed
+2025-11-14 00:04:02 - INFO - Batch prediction completed - 2 applications processed
+2025-11-14 00:04:02 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-14 00:04:22 - INFO - Received batch prediction request for 2 applications
+2025-11-14 00:04:22 - INFO - Prediction successful - Risk: Low, Probability: 0.2068
+2025-11-14 00:04:22 - INFO - Prediction successful - Risk: Low, Probability: 0.2168
+2025-11-14 00:04:22 - INFO - Batch prediction successful - 2 applications processed
+2025-11-14 00:04:22 - INFO - Batch prediction completed - 2 applications processed
+2025-11-14 00:04:22 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-14 00:05:56 - INFO - New user registered: Jeevith
+2025-11-14 00:06:01 - INFO - User logged in: Jeevith
+2025-11-14 00:06:08 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-14 00:06:08 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-14 00:06:08 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-14 00:12:43 - INFO - User logged in: Jeevith
+2025-11-14 00:12:47 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-14 00:12:47 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-14 00:12:47 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-14 00:12:53 - INFO - Received batch prediction request for 2 applications
+2025-11-14 00:12:53 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-14 00:12:53 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-14 00:12:53 - INFO - Batch prediction successful - 2 applications processed
+2025-11-14 00:12:53 - INFO - Batch prediction completed - 2 applications processed
+2025-11-14 00:12:53 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-14 00:13:05 - INFO - Received batch prediction request for 3 applications
+2025-11-14 00:13:05 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-14 00:13:05 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-14 00:13:05 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-14 00:13:05 - INFO - Batch prediction successful - 3 applications processed
+2025-11-14 00:13:05 - INFO - Batch prediction completed - 3 applications processed
+2025-11-14 00:13:05 - INFO - Risk distribution: {'Low': 3, 'Medium': 0, 'High': 0}
+2025-11-14 00:13:37 - INFO - Credit Path AI API shutting down...
+2025-11-15 18:42:59 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-15 18:43:01 - INFO - Model package loaded successfully
+2025-11-15 18:43:01 - INFO - Model version: 1.0
+2025-11-15 18:43:01 - INFO - Loan Default Predictor initialized successfully
+2025-11-15 18:43:01 - INFO - Credit Path AI API starting up...
+2025-11-15 18:43:01 - INFO - Model version: 1.0
+2025-11-15 18:43:01 - INFO - Model ROC AUC: 0.8898
+2025-11-15 18:43:27 - INFO - User logged in: Jeevith
+2025-11-15 18:44:04 - INFO - Received prediction request for loan amount: $200,000.00
+2025-11-15 18:44:04 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-15 18:44:04 - INFO - Prediction completed - Risk: Low, Probability: 0.204
+2025-11-15 18:44:16 - INFO - Received batch prediction request for 2 applications
+2025-11-15 18:44:16 - INFO - Prediction successful - Risk: Low, Probability: 0.2040
+2025-11-15 18:44:17 - INFO - Prediction successful - Risk: Low, Probability: 0.1664
+2025-11-15 18:44:17 - INFO - Batch prediction successful - 2 applications processed
+2025-11-15 18:44:17 - INFO - Batch prediction completed - 2 applications processed
+2025-11-15 18:44:17 - INFO - Risk distribution: {'Low': 2, 'Medium': 0, 'High': 0}
+2025-11-15 18:46:20 - INFO - User logged in: Jeevith
+2025-11-15 19:37:54 - INFO - Credit Path AI API shutting down...
+2025-11-15 20:17:36 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-15 20:17:37 - INFO - Model package loaded successfully
+2025-11-15 20:17:37 - INFO - Model version: 1.0
+2025-11-15 20:17:37 - INFO - Loan Default Predictor initialized successfully
+2025-11-15 20:17:37 - INFO - Credit Path AI API starting up...
+2025-11-15 20:17:37 - INFO - Model version: 1.0
+2025-11-15 20:17:37 - INFO - Model ROC AUC: 0.8898
+2025-11-15 20:54:44 - INFO - User logged in: Jeevith
+2025-11-15 20:55:01 - INFO - User logged in: Jeevith
+2025-11-15 21:05:24 - INFO - Credit Path AI API shutting down...
+2025-11-16 21:02:07 - INFO - Model found at: ../models/credit_path_ai_model_package.pkl
+2025-11-16 21:02:10 - INFO - Model package loaded successfully
+2025-11-16 21:02:10 - INFO - Model version: 1.0
+2025-11-16 21:02:10 - INFO - Loan Default Predictor initialized successfully
+2025-11-16 21:02:10 - INFO - Credit Path AI API starting up...
+2025-11-16 21:02:10 - INFO - Model version: 1.0

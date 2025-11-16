@@ -1,0 +1,6 @@
+{
+  "low_threshold": 0.40000000000000013,
+  "high_threshold": 0.6500000000000001,
+  "model_version": "xgb_v1",
+  "date": "2025-11-08"
+}

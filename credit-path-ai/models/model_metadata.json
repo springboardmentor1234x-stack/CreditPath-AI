@@ -1,0 +1,167 @@
+{
+  "model_info": {
+    "model_name": "Credit Path AI - Loan Default Predictor",
+    "model_type": "XGBoost Classifier",
+    "version": "1.0",
+    "created_date": "2025-11-08 13:50:07",
+    "framework": "XGBoost",
+    "training_samples": 118936,
+    "test_samples": 29734
+  },
+  "performance_metrics": {
+    "test_roc_auc": 0.8898415930630323,
+    "test_accuracy": 0.8789264814690254,
+    "test_precision": 0.7729935559461043,
+    "test_recall": 0.7202510917030568,
+    "test_f1_score": 0.7456908731280023
+  },
+  "risk_band_thresholds": {
+    "low_threshold": 0.40000000000000013,
+    "high_threshold": 0.6500000000000001,
+    "low_risk_definition": "probability <= 0.40000000000000013",
+    "medium_risk_definition": "0.40000000000000013 < probability <= 0.6500000000000001",
+    "high_risk_definition": "probability > 0.6500000000000001"
+  },
+  "risk_band_performance": {
+    "low_risk": {
+      "test_samples": 20954,
+      "default_rate": 0.07922115109287009,
+      "percentage_of_portfolio": 70.47151409161229
+    },
+    "medium_risk": {
+      "test_samples": 3382,
+      "default_rate": 0.24127735068007097,
+      "percentage_of_portfolio": 11.374184435326562
+    },
+    "high_risk": {
+      "test_samples": 5398,
+      "default_rate": 0.8988514264542424,
+      "percentage_of_portfolio": 18.154301473061143
+    }
+  },
+  "feature_info": {
+    "total_features": 61,
+    "numeric_features": 12,
+    "categorical_features": 16,
+    "engineered_features": [
+      "dsbr",
+      "loan_to_income",
+      "csri",
+      "ltv_stress",
+      "property_loan_ratio"
+    ]
+  },
+  "hyperparameters": {
+    "n_estimators": 297,
+    "learning_rate": 0.0805137712668338,
+    "max_depth": 5,
+    "subsample": 0.6888431241882921,
+    "colsample_bytree": 0.6002081507981263,
+    "scale_pos_weight": 3.0577257684828223
+  },
+  "preprocessing": {
+    "numeric_columns": [
+      "loan_amount",
+      "term",
+      "property_value",
+      "income",
+      "credit_score",
+      "ltv",
+      "dtir1",
+      "dsbr",
+      "loan_to_income",
+      "csri",
+      "ltv_stress",
+      "property_loan_ratio"
+    ],
+    "categorical_columns": [
+      "gender",
+      "loan_type",
+      "loan_purpose",
+      "credit_worthiness",
+      "open_credit",
+      "business_or_commercial",
+      "neg_ammortization",
+      "interest_only",
+      "lump_sum_payment",
+      "construction_type",
+      "occupancy_type",
+      "total_units",
+      "credit_type",
+      "co-applicant_credit_type",
+      "age",
+      "region"
+    ],
+    "feature_names_after_encoding": [
+      "loan_amount",
+      "term",
+      "property_value",
+      "income",
+      "credit_score",
+      "ltv",
+      "dtir1",
+      "dsbr",
+      "loan_to_income",
+      "csri",
+      "ltv_stress",
+      "property_loan_ratio",
+      "gender_Female",
+      "gender_Joint",
+      "gender_Male",
+      "gender_Sex Not Available",
+      "loan_type_type1",
+      "loan_type_type2",
+      "loan_type_type3",
+      "loan_purpose_p1",
+      "loan_purpose_p2",
+      "loan_purpose_p3",
+      "loan_purpose_p4",
+      "credit_worthiness_l1",
+      "credit_worthiness_l2",
+      "open_credit_nopc",
+      "open_credit_opc",
+      "business_or_commercial_b/c",
+      "business_or_commercial_nob/c",
+      "neg_ammortization_neg_amm",
+      "neg_ammortization_not_neg",
+      "interest_only_int_only",
+      "interest_only_not_int",
+      "lump_sum_payment_lpsm",
+      "lump_sum_payment_not_lpsm",
+      "construction_type_mh",
+      "construction_type_sb",
+      "occupancy_type_ir",
+      "occupancy_type_pr",
+      "occupancy_type_sr",
+      "total_units_1U",
+      "total_units_2U",
+      "total_units_3U",
+      "total_units_4U",
+      "credit_type_CIB",
+      "credit_type_CRIF",
+      "credit_type_EQUI",
+      "credit_type_EXP",
+      "co-applicant_credit_type_CIB",
+      "co-applicant_credit_type_EXP",
+      "age_25-34",
+      "age_35-44",
+      "age_45-54",
+      "age_55-64",
+      "age_65-74",
+      "age_<25",
+      "age_>74",
+      "region_North",
+      "region_North-East",
+      "region_central",
+      "region_south"
+    ],
+    "scaler": "StandardScaler",
+    "encoder": "OneHotEncoder",
+    "imputation": "median (numeric), most_frequent (categorical)"
+  },
+  "business_rules": {
+    "low_risk_action": "Standard approval process",
+    "medium_risk_action": "Enhanced verification required",
+    "high_risk_action": "Detailed manual review or rejection"
+  }
+}
