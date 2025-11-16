@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pandas
+scikit-learn
+joblib
+xgboost
+sqlalchemy[sqlite]
+python-jose[cryptography]
+python-multipart
+pydantic[email]
+aiofiles
+passlib==1.7.4
+bcrypt==3.2.0
