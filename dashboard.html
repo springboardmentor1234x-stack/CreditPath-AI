@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard — CreditPathAI</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="bg-indigo-50 min-h-screen">
+  <div class="container mx-auto p-6">
+    <div class="bg-white rounded-xl shadow p-6">
+      <div class="flex justify-between items-center">
+        <div>
+          <h2 class="text-xl font-bold" id="welcome">Welcome</h2>
+          <p class="text-sm text-gray-600" id="email"></p>
+        </div>
+        <div class="space-x-2">
+          <a href="/static/predict.html" class="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded">Make Prediction</a>
+          <a href="/static/batch.html" class="px-4 py-2 bg-white border rounded">Batch Prediction</a>
+          <button id="logsBtn" class="px-4 py-2 bg-white border rounded">View Logs</button>
+        </div>
+      </div>
+      <div id="logs" class="mt-6 hidden">
+        <h3 class="font-semibold">Recent Predictions</h3>
+        <div id="logList" class="mt-4"></div>
+      </div>
+    </div>
+  </div>
+
+<script>
+const token = localStorage.getItem('token');
+if(!token) window.location.href='/static/login.html';
+async function loadUser(){
+  const res = await fetch('/me', {headers:{Authorization:'Bearer '+token}});
+  if(!res.ok){ localStorage.removeItem('token'); window.location.href='/static/login.html'; return; }
+  const j = await res.json();
+  document.getElementById('welcome').innerText = 'Welcome, ' + j.name;
+  document.getElementById('email').innerText = j.email;
+}
+loadUser();
+
+document.getElementById('logsBtn').addEventListener('click', async ()=>{
+  const el = document.getElementById('logs');
+  el.classList.toggle('hidden');
+  if(!el.classList.contains('hidden')){
+    const res = await fetch('/logs', {headers:{Authorization:'Bearer '+token}});
+    const data = await res.json();
+    const container = document.getElementById('logList');
+    container.innerHTML = '';
+    data.forEach(l=>{
+      const d = document.createElement('div');
+      d.className='p-3 border rounded mb-2 bg-gray-50';
+      d.innerHTML = `<div><strong>${l.risk_level}</strong> — ${l.probability.toFixed(2)}</div><div class="text-xs text-gray-600">${l.timestamp}</div><div class="mt-1 text-sm">${l.recommendation}</div>`;
+      container.appendChild(d);
+    });
+  }
+});
+</script>
+</body>
+</html>

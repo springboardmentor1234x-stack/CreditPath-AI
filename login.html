@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Login — CreditPathAI</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gradient-to-b from-indigo-50 to-white">
+  <div class="w-full max-w-md bg-white rounded-xl shadow-lg p-6">
+    <h2 class="text-2xl font-bold mb-4">Sign in</h2>
+    <div id="error" class="text-sm text-red-600 mb-2"></div>
+    <form id="loginForm" class="space-y-4">
+      <input name="email" placeholder="Email" class="w-full p-3 border rounded" />
+      <input name="password" placeholder="Password" type="password" class="w-full p-3 border rounded" />
+      <button class="w-full py-3 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded">Login</button>
+    </form>
+    <p class="mt-4 text-sm">Don't have an account? <a href="/static/signup.html" class="text-blue-600">Sign up</a></p>
+  </div>
+<script>
+document.getElementById('loginForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const f = Object.fromEntries(new FormData(e.target).entries());
+  const res = await fetch('/login', {
+    method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(f)
+  });
+  const j = await res.json();
+  if(!res.ok){ document.getElementById('error').innerText = j.detail || JSON.stringify(j); return; }
+  localStorage.setItem('token', j.access_token);
+  window.location.href='/static/dashboard.html';
+});
+</script>
+</body>
+</html>

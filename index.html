@@ -1,33 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Loan Application Form</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <title>CreditPathAI — Home</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="/static/styles.css">
 </head>
-<body>
-  <h1>Credit Path AI - Loan Eligibility Detection</h1>
+<body class="bg-gradient-to-b from-indigo-50 to-white text-gray-800">
+  <header class="bg-gradient-to-r from-purple-600 to-blue-500 text-white p-6 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">CreditPathAI</h1>
+      <nav class="space-x-4">
+        <a href="/static/index.html" class="hover:underline">Home</a>
+        <a href="/static/about.html" class="hover:underline">About</a>
+        <a href="/static/login.html" class="hover:underline">Login</a>
+      </nav>
+    </div>
+  </header>
 
-  <form id="loanForm">
-    <label for="name">Full Name:</label>
-    <input type="text" id="name" required>
+  <main class="container mx-auto p-6">
+    <section class="grid md:grid-cols-2 gap-6 items-center">
+      <div>
+        <h2 class="text-4xl font-extrabold mb-4">Predict, Prioritize, Recover.</h2>
+        <p class="text-lg mb-6">CreditPathAI helps banks predict borrower default probability and recommends recovery strategies for agents — all in one beautiful dashboard.</p>
+        <a href="/static/login.html" class="inline-block px-6 py-3 bg-white text-purple-700 rounded-lg shadow hover:shadow-md">Get Started</a>
+      </div>
+      <div>
+        <div class="rounded-xl shadow-lg overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1559028012-481ad6e59b5a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" alt="dashboard" class="w-full h-64 object-cover">
+        </div>
+      </div>
+    </section>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" required>
+    <section class="mt-12 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-white rounded-xl shadow hover:scale-[1.02] transition">
+        <h3 class="font-bold">Predict Default Risk</h3>
+        <p class="mt-2 text-sm">Single and batch predictions with visual charts.</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow hover:scale-[1.02] transition">
+        <h3 class="font-bold">Actionable Recommendations</h3>
+        <p class="mt-2 text-sm">Mapped from probability percentiles to recovery actions.</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow hover:scale-[1.02] transition">
+        <h3 class="font-bold">Audit Logging</h3>
+        <p class="mt-2 text-sm">All predictions logged for compliance and analysis.</p>
+      </div>
+    </section>
+  </main>
 
-    <label for="age">Age:</label>
-    <input type="number" id="age" required>
-
-    <label for="income">Annual Income ($):</label>
-    <input type="number" id="income" required>
-
-    <label for="creditScore">Credit Score:</label>
-    <input type="number" id="creditScore" required>
-
-    <button type="submit">Check Eligibility</button>
-  </form>
-
-  <script src="script.js"></script>
+  <footer class="p-6 mt-12 text-center text-sm text-gray-600">
+    © CreditPathAI — Built for demo purposes
+  </footer>
 </body>
 </html>
