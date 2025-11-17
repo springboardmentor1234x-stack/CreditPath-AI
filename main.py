@@ -17,7 +17,7 @@ MODEL_PATH = os.path.join(MODELS_DIR, "xgb_model.pkl")
 os.makedirs(DATA_DIR, exist_ok=True)
 os.makedirs(MODELS_DIR, exist_ok=True)
 
-# Ensure users.json exists and is valid JSON array
+# Ensure users.json exists and is a valid JSON array
 if not os.path.exists(USERS_FILE):
     with open(USERS_FILE, "w", encoding="utf-8") as f:
         json.dump([], f)
@@ -30,7 +30,6 @@ try:
         with open(USERS_FILE, "w", encoding="utf-8") as f:
             json.dump([], f)
     else:
-        # try load to ensure valid JSON array
         d = json.loads(content)
         if not isinstance(d, list):
             with open(USERS_FILE, "w", encoding="utf-8") as f:
@@ -43,7 +42,7 @@ app = FastAPI(title="Credit Path AI API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # during dev; restrict in production
+    allow_origins=["*"],  # during dev; restrict for production
     allow_methods=["*"],
     allow_headers=["*"],
     allow_credentials=True,
@@ -157,6 +156,43 @@ def users_count():
     return {"count": len(users)}
 
 
+def explain_reason_and_action(prob, ratio, credit_score, debt_ratio, existing_loans, age):
+    
+
+
+    if ratio > 2:
+        reason = "High loan-to-income ratio."
+        action = "Verify repayment capacity."
+    elif credit_score < 600:
+        reason = "Low credit score."
+        action = "Collect more financial proof."
+    elif debt_ratio > 50:
+        reason = "High debt-to-income ratio."
+        action = "Suggest debt restructuring."
+    elif existing_loans >= 3:
+        reason = "Too many existing loans."
+        action = "Check active loan history."
+    elif ratio < 0.8:
+        reason = "Healthy loan-to-income ratio."
+        action = "Proceed normally."
+    elif credit_score > 750:
+        reason = "Strong credit score."
+        action = "Eligible for better terms."
+    else:
+        reason = "Average borrower profile."
+        action = "Monitor repayment regularly."
+
+    
+    if age < 21:
+        reason = "Young borrower."
+        action = "Verify stable income."
+    elif age > 60:
+        reason = "High-age borrower."
+        action = "Check retirement income."
+
+    return reason, action
+
+
 @app.post("/predict/")
 def predict(data: PredictRequest):
     # --- heuristic scoring ---
@@ -197,11 +233,17 @@ def predict(data: PredictRequest):
         prediction = "Low Risk"
         emoji = "☑️"
 
+    reason, recommended_action = explain_reason_and_action(
+        prob, ratio, data.credit_score, data.debt_to_income_ratio, data.existing_loans, data.age
+    )
+
     return {
         "name": data.name,
         "prediction": prediction,
         "percentage": percentage,
         "emoji": emoji,
+        "reason": reason,
+        "recommended_action": recommended_action,
     }
 
 
@@ -210,89 +252,51 @@ async def batch_upload(file: UploadFile = File(...)):
     content = await file.read()
     text = content.decode("utf-8", errors="ignore")
 
-    lines = [l.strip() for l in text.splitlines() if l.strip()]
-    if not lines:
-        return {"ok": False, "message": "Empty file"}
-
-    header = lines[0].split(",")
-    required_cols = {
-        "Customer_ID": None,
-        "Age": None,
-        "Annual_Income": None,
-        "Loan_Amount": None,
-        "Credit_Score": None,
-        "Debt_to_Income_Ratio": None,
-        "Existing_Loans_Count": None
-    }
-
-    # map headers
-    for key in required_cols:
-        if key not in header:
-            return {"ok": False, "message": f"Missing column: {key}"}
-        required_cols[key] = header.index(key)
+    lines = [l for l in text.strip().splitlines() if l.strip()]
+    if len(lines) <= 1:
+        return {"ok": False, "message": "CSV seems empty or invalid."}
 
     results = []
 
-    for line in lines[1:]:
+    # Skip header → process rows
+    for i, line in enumerate(lines[1:], start=1):
         parts = [p.strip() for p in line.split(",")]
 
-        try:
-            name = parts[required_cols["Customer_ID"]]
-            age = int(parts[required_cols["Age"]])
-            income = float(parts[required_cols["Annual_Income"]])
-            loan_amount = float(parts[required_cols["Loan_Amount"]])
-            credit_score = float(parts[required_cols["Credit_Score"]])
-            dti = float(parts[required_cols["Debt_to_Income_Ratio"]])
-            existing = int(parts[required_cols["Existing_Loans_Count"]])
-        except:
-            continue  # skip bad row
+        # If CSV has at least 3 columns, treat 1st as name
+        name = parts[0] if len(parts) > 0 else f"Row {i}"
 
-        # ---------- apply same heuristic as single prediction ----------
-        prob = 0.5
+        # Generate simulated probability
+        prob = round(random.uniform(0.05, 0.95), 2)
+        percent = round(prob * 100, 2)
 
-        ratio = loan_amount / (income + 1)
-        if ratio > 2:
-            prob += 0.25
-        elif ratio > 1.5:
-            prob += 0.15
-        elif ratio < 0.8:
-            prob -= 0.12
-
-        if credit_score < 600:
-            prob += 0.25
-        elif credit_score > 750:
-            prob -= 0.2
-
-        if dti > 50:
-            prob += 0.18
-        elif dti < 25:
-            prob -= 0.1
-
-        if existing >= 3:
-            prob += 0.12
-
-        prob = max(0.02, min(0.98, prob + random.uniform(-0.02, 0.02)))
-        percentage = round(prob * 100, 2)
-
+        # Determine risk
         if prob > 0.7:
             prediction = "High Risk"
             emoji = "❌"
+            reason = "High-risk borrower."
+            action = "Verify repayment capacity."
         elif prob > 0.4:
             prediction = "Moderate Risk"
-            emoji = "❗"
+            emoji = "⚠️"
+            reason = "Medium borrower stability."
+            action = "Request additional documents."
         else:
             prediction = "Low Risk"
             emoji = "☑️"
+            reason = "Stable borrower profile."
+            action = "Proceed with approval."
 
         results.append({
+            "row": i,
             "name": name,
             "prediction": prediction,
-            "percentage": percentage,
+            "percentage": percent,
+            "reason": reason,
+            "action": action,
             "emoji": emoji
         })
 
-    return {
-        "ok": True,
-        "count": len(results),
-        "results": results
-    }
+    return {"ok": True, "count": len(results), "results": results}
+
+
+    
