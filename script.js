@@ -14,12 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
   if(clearBtn) clearBtn.addEventListener('click', doClear);
   if(closePopup) closePopup.addEventListener('click', ()=> popupOverlay.style.display = 'none');
 
-  document.getElementById('logoutBtn').addEventListener('click', (e)=>{
-    e.preventDefault();
-    localStorage.removeItem('cpai_token');
-    localStorage.removeItem('cpai_name');
-    window.location.href = 'login.html';
-  });
+  const logout = document.getElementById('logoutBtn');
+  if (logout){
+    logout.addEventListener('click', (e)=>{
+      e.preventDefault();
+      localStorage.removeItem('cpai_token');
+      localStorage.removeItem('cpai_name');
+      window.location.href = 'login.html';
+    });
+  }
 });
 
 function gatherData(){
@@ -54,15 +57,20 @@ async function doPredict(){
 }
 
 function showPopup(res){
+
+  document.getElementById('p_emoji').innerText = res.emoji || '';
   document.getElementById('p_name').innerText = res.name || 'Unknown';
   document.getElementById('p_pred').innerText = 'Prediction: ' + (res.prediction || '—');
   document.getElementById('p_prob').innerText = 'Probability: ' + (res.percentage !== undefined ? (res.percentage + '%') : '—');
-  document.getElementById('p_emoji').innerText = res.emoji || '';
+  document.getElementById('p_reason').innerText = 'Main reason: ' + (res.reason || '—');
+  document.getElementById('p_action').innerText = 'Recommended action: ' + (res.recommended_action || '—');
+
   document.getElementById('popupOverlay').style.display = 'flex';
-  // center animation
-  setTimeout(()=> {
-    document.getElementById('popupOverlay').querySelector('.popup').style.transform = 'translateY(0)';
-  }, 10);
+
+
+  const popupEl = document.getElementById('popupOverlay').querySelector('.popup');
+  popupEl.style.transform = 'translateY(-12px)';
+  setTimeout(()=> popupEl.style.transform = 'translateY(0)', 10);
 }
 
 function doClear(){
