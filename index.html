@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreditPath AI Loan Risk Predictor</title>
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Tailwind Configuration */
+        :root {
+            --primary-color: #2563EB; /* Blue-600 */
+            --secondary-color: #0D9488; /* Teal-600 */
+            --danger-color: #EF4444; /* Red-500 */
+            --warning-color: #F59E0B; /* Amber-500 */
+            --success-color: #10B981; /* Emerald-500 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease;
+        }
+        /* Custom Scrollbar for dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1F2937; /* Gray-800 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4B5563; /* Gray-600 */
+            border-radius: 4px;
+        }
+        .page-section {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+        .active-page {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom progress bar fill for the results page */
+        .risk-progress-bar {
+            transition: width 1s ease-in-out;
+        }
+        /* Style for interactive elements */
+        button, a, input, select, textarea {
+            transition: all 0.2s ease-in-out;
+        }
+        /* Custom Chart Styles */
+        .chart-container {
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 1.5rem; /* p-6 */
+            background-color: #1F2937; /* bg-gray-800 */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+        }
+
+    </style>
+</head>
+
+<body class="bg-gray-900 min-h-screen text-gray-100 p-4 sm:p-8">
+
+    <!-- Navbar & Navigation (Restored to original state without login dependencies) -->
+    <nav class="bg-gray-800/80 backdrop-blur-md sticky top-0 z-10 rounded-xl shadow-2xl mb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo/Brand -->
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold gradient-text">
+                        <span class="text-blue-500">C</span>redit<span class="text-teal-400">Path AI</span>
+                    </span>
+                </div>
+                <!-- Navigation Links -->
+                <div class="flex">
+                    <a href="#" onclick="showPage('dashboard')" class="nav-item border-b-2 border-transparent text-gray-300 hover:border-blue-500 hover:text-white px-3 py-2 text-sm font-medium flex items-center" data-page="dashboard">
+                        📊 Dashboard
+                    </a>
+                    <a href="#" onclick="showPage('borrower-form')" class="nav-item border-b-2 border-transparent text-gray-300 hover:border-blue-500 hover:text-white px-3 py-2 text-sm font-medium flex items-center" data-page="borrower-form">
+                        📝 Apply
+                    </a>
+                    <a href="#" onclick="showPage('insights')" class="nav-item border-b-2 border-transparent text-gray-300 hover:border-blue-500 hover:text-white px-3 py-2 text-sm font-medium flex items-center" data-page="insights">
+                        🔍 Insights
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <main class="max-w-7xl mx-auto">
+        <!-- Message Box Container -->
+        <div id="message-box" class="fixed right-5 top-20 z-50"></div>
+
+        <!-- 1. DASHBOARD PAGE -->
+        <section id="dashboard" class="page-section">
+            <h1 class="text-3xl sm:text-4xl font-extrabold mb-8 gradient-text">System Overview Dashboard</h1>
+            
+            <!-- Statistic Cards -->
+            <div id="stat-cards" class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+                <!-- Cards will be populated by JS -->
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Risk Profile Bars (L/M/H) -->
+                <div id="risk-profile" class="lg:col-span-2 bg-gray-800 rounded-xl p-6 shadow-xl">
+                    <h2 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Risk Distribution Over Time (Mock)</h2>
+                    <div class="h-48 flex flex-col justify-center space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <span class="text-sm w-24">Low Risk:</span>
+                            <div class="flex-grow bg-gray-700 rounded-full h-4">
+                                <div id="low-risk-bar" class="bg-emerald-500 h-full rounded-full" style="width: 45%;"></div>
+                            </div>
+                            <span id="low-risk-text" class="text-sm font-medium w-10 text-right">45%</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-sm w-24">Moderate Risk:</span>
+                            <div class="flex-grow bg-gray-700 rounded-full h-4">
+                                <div id="moderate-risk-bar" class="bg-yellow-500 h-full rounded-full" style="width: 35%;"></div>
+                            </div>
+                            <span id="moderate-risk-text" class="text-sm font-medium w-10 text-right">35%</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-sm w-24">High Risk:</span>
+                            <div class="flex-grow bg-gray-700 rounded-full h-4">
+                                <div id="high-risk-bar" class="bg-red-500 h-full rounded-full" style="width: 20%;"></div>
+                            </div>
+                            <span id="high-risk-text" class="text-sm font-medium w-10 text-right">20%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple Bar Chart (Canvas) -->
+                <div class="lg:col-span-1 bg-gray-800 rounded-xl p-6 shadow-xl">
+                    <h2 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Approval Rate (Last 30 Days)</h2>
+                    <div class="h-48 flex items-center justify-center">
+                        <canvas id="approval-chart" class="w-full h-full"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. BORROWER FORM PAGE -->
+        <section id="borrower-form" class="page-section">
+            <h1 class="text-3xl sm:text-4xl font-extrabold mb-8 gradient-text">Loan Risk Assessment Form</h1>
+            <div class="bg-gray-800 p-6 sm:p-10 rounded-xl shadow-2xl max-w-2xl mx-auto">
+                <form id="loan-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- Loan Amount -->
+                    <div>
+                        <label for="loanAmount" class="block text-sm font-medium text-gray-300 mb-1">Loan Amount ($)</label>
+                        <input type="number" id="loanAmount" name="loanAmount" required step="1000" min="1000" class="w-full bg-gray-700 text-white border-gray-600 rounded-lg p-3 focus:ring-blue-500 focus:border-blue-500 transition duration-150" placeholder="e.g., 50000">
+                    </div>
+
+                    <!-- Annual Income -->
+                    <div>
+                        <label for="annualIncome" class="block text-sm font-medium text-gray-300 mb-1">Annual Income ($)</label>
+                        <input type="number" id="annualIncome" name="annualIncome" required step="1000" min="12000" class="w-full bg-gray-700 text-white border-gray-600 rounded-lg p-3 focus:ring-blue-500 focus:border-blue-500 transition duration-150" placeholder="e.g., 90000">
+                    </div>
+
+                    <!-- Credit Score -->
+                    <div>
+                        <label for="creditScore" class="block text-sm font-medium text-gray-300 mb-1">Credit Score</label>
+                        <input type="number" id="creditScore" name="creditScore" required min="300" max="850" class="w-full bg-gray-700 text-white border-gray-600 rounded-lg p-3 focus:ring-blue-500 focus:border-blue-500 transition duration-150" placeholder="e.g., 720">
+                    </div>
+
+                    <!-- Monthly Debt -->
+                    <div>
+                        <label for="monthlyDebt" class="block text-sm font-medium text-gray-300 mb-1">Monthly Debt Payments ($)</label>
+                        <input type="number" id="monthlyDebt" name="monthlyDebt" required min="0" step="50" class="w-full bg-gray-700 text-white border-gray-600 rounded-lg p-3 focus:ring-blue-500 focus:border-blue-500 transition duration-150" placeholder="e.g., 850">
+                    </div>
+
+                    <!-- Employment Length -->
+                    <div>
+                        <label for="employmentLength" class="block text-sm font-medium text-gray-300 mb-1">Employment Length (Years)</label>
+                        <input type="number" id="employmentLength" name="employmentLength" required min="0" max="30" step="1" class="w-full bg-gray-700 text-white border-gray-600 rounded-lg p-3 focus:ring-blue-500 focus:border-blue-500 transition duration-150" placeholder="e.g., 7">
+                    </div>
+
+                    <!-- Home Ownership -->
+                    <div>
+                        <label for="homeOwnership" class="block text-sm font-medium text-gray-300 mb-1">Home Ownership</label>
+                        <select id="homeOwnership" name="homeOwnership" required class="w-full bg-gray-700 text-white border-gray-600 rounded-lg p-3 focus:ring-blue-500 focus:border-blue-500 appearance-none transition duration-150">
+                            <option value="">-- Select --</option>
+                            <option value="RENT">Rent</option>
+                            <option value="MORTGAGE">Mortgage</option>
+                            <option value="OWN">Own</option>
+                        </select>
+                    </div>
+
+                    <!-- Revolving Credit Limit -->
+                    <div>
+                        <label for="revolvingCreditLimit" class="block text-sm font-medium text-gray-300 mb-1">Revolving Credit Limit ($)</label>
+                        <input type="number" id="revolvingCreditLimit" name="revolvingCreditLimit" required min="0" step="1000" class="w-full bg-gray-700 text-white border-gray-600 rounded-lg p-3 focus:ring-blue-500 focus:border-blue-500 transition duration-150" placeholder="e.g., 20000">
+                    </div>
+
+                    <!-- Credit Card Debt -->
+                    <div>
+                        <label for="creditCardDebt" class="block text-sm font-medium text-gray-300 mb-1">Credit Card Debt ($)</label>
+                        <input type="number" id="creditCardDebt" name="creditCardDebt" required min="0" step="100" class="w-full bg-gray-700 text-white border-gray-600 rounded-lg p-3 focus:ring-blue-500 focus:border-blue-500 transition duration-150" placeholder="e.g., 3500">
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="md:col-span-2 pt-4">
+                        <button type="submit" class="w-full text-white font-bold py-3 px-6 rounded-xl text-lg shadow-lg
+                                                     bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600
+                                                     transform hover:scale-[1.01] transition duration-300 ease-in-out">
+                            Analyze Risk & Predict Approval
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- 3. RESULTS PAGE -->
+        <section id="results" class="page-section">
+            <h1 class="text-3xl sm:text-4xl font-extrabold mb-8 gradient-text">Prediction Results & Risk Assessment</h1>
+            <div id="results-content" class="bg-gray-800 p-6 sm:p-10 rounded-xl shadow-2xl max-w-4xl mx-auto">
+                <!-- Data will be populated by JS -->
+                <div class="text-center py-10">
+                    <p class="text-gray-400">Please submit a loan application to view results.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. INSIGHTS PAGE -->
+        <section id="insights" class="page-section">
+            <h1 class="text-3xl sm:text-4xl font-extrabold mb-8 gradient-text">Financial Ratio Insights</h1>
+            <div id="insights-content" class="max-w-4xl mx-auto">
+                <!-- Ratios -->
+                <div id="ratio-cards" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <!-- Ratio cards will be populated by JS -->
+                    <div class="md:col-span-3 text-center py-8 bg-gray-800 rounded-xl shadow-xl">
+                        <p class="text-gray-400">Run a prediction to generate financial insights.</p>
+                    </div>
+                </div>
+
+                <!-- Canvas Line Chart -->
+                <div class="bg-gray-800 rounded-xl p-6 shadow-xl">
+                    <h2 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Simulated Trajectory of Risk Score</h2>
+                    <div class="h-64 flex items-center justify-center">
+                        <canvas id="insight-line-chart" class="w-full h-full"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- 1. GLOBAL STATE & SETUP ---
+        const state = {
+            currentPage: 'dashboard',
+            prediction: null,
+            mockDashboardData: {
+                totalApplications: '12,450',
+                avgApprovalRate: '78.5%',
+                last7DayVolume: '$125M',
+                spamDetected: '4.2%'
+            }
+        };
+
+        const pages = ['dashboard', 'borrower-form', 'results', 'insights'];
+
+        // DOM elements
+        const loanForm = document.getElementById('loan-form');
+        
+        /**
+         * Custom non-blocking message box implementation (replaces alert()).
+         * @param {string} message - The message to display.
+         * @param {string} type - 'success', 'error', 'warning'.
+         */
+        function showMessage(message, type = 'info') {
+            const container = document.getElementById('message-box');
+            const colorMap = {
+                success: 'bg-emerald-500 border-emerald-700',
+                error: 'bg-red-500 border-red-700',
+                warning: 'bg-yellow-500 border-yellow-700',
+                info: 'bg-blue-500 border-blue-700'
+            };
+            const iconMap = {
+                success: '✅',
+                error: '❌',
+                warning: '⚠️',
+                info: '💡'
+            };
+
+            const box = document.createElement('div');
+            box.className = `p-4 mb-2 max-w-xs rounded-xl shadow-2xl text-white font-medium border-l-4 ${colorMap[type]} opacity-0 transition-all duration-300 transform translate-x-10`;
+            box.innerHTML = `${iconMap[type]} <span class="ml-2">${message}</span>`;
+            container.appendChild(box);
+
+            // Fade in
+            setTimeout(() => {
+                box.classList.remove('opacity-0', 'translate-x-10');
+                box.classList.add('opacity-100', 'translate-x-0');
+            }, 50);
+
+            // Fade out and remove after 5 seconds
+            setTimeout(() => {
+                box.classList.remove('opacity-100', 'translate-x-0');
+                box.classList.add('opacity-0', 'translate-x-10');
+                setTimeout(() => box.remove(), 300);
+            }, 5000);
+        }
+
+        // --- 2. NAVIGATION ---
+
+        /**
+         * Switches the active page view.
+         * @param {string} pageId - The ID of the page section to show.
+         */
+        function showPage(pageId) {
+            state.currentPage = pageId;
+
+            pages.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.classList.remove('active-page');
+                }
+            });
+
+            const activeElement = document.getElementById(pageId);
+            if (activeElement) {
+                activeElement.classList.add('active-page');
+            }
+
+            // Update nav item highlighting
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('border-blue-500', 'text-white');
+                item.classList.add('border-transparent', 'text-gray-300');
+                if (item.dataset.page === pageId) {
+                    item.classList.add('border-blue-500', 'text-white');
+                    item.classList.remove('border-transparent', 'text-gray-300');
+                }
+            });
+
+            // Re-render data-dependent pages
+            if (pageId === 'results' && state.prediction) {
+                renderResults(state.prediction);
+            } else if (pageId === 'insights' && state.prediction) {
+                renderInsights(state.prediction);
+            } else if (pageId === 'dashboard') {
+                renderDashboard();
+            }
+        }
+
+        // --- 3. CORE PREDICTION LOGIC (Replaced with Server Fetch) ---
+
+        /**
+         * Clamps a value between a min and max limit.
+         * @param {number} num
+         * @param {number} min
+         * @param {number} max
+         * @returns {number}
+         */
+        const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+
+        // NOTE: The previous local `calculatePrediction` function is removed.
+        // The logic for derived features and risk labeling is integrated into the form handler.
+        
+        // --- 4. FORM HANDLING (Updated for API Call) ---
+
+        if (loanForm) {
+            loanForm.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const formData = new FormData(event.target);
+                
+                // Convert all form fields to floats/ints for JSON and local ratio calculation
+                const data = {
+                    loanAmount: parseFloat(formData.get('loanAmount')),
+                    annualIncome: parseFloat(formData.get('annualIncome')),
+                    creditScore: parseInt(formData.get('creditScore'), 10),
+                    monthlyDebt: parseFloat(formData.get('monthlyDebt')),
+                    employmentLength: parseFloat(formData.get('employmentLength')),
+                    homeOwnership: formData.get('homeOwnership'),
+                    revolvingCreditLimit: parseFloat(formData.get('revolvingCreditLimit')),
+                    creditCardDebt: parseFloat(formData.get('creditCardDebt'))
+                };
+
+                // Basic validation check
+                for (const key in data) {
+                    if (data[key] === null || data[key] === undefined || (typeof data[key] !== 'string' && isNaN(data[key])) || data.homeOwnership === "") {
+                        showMessage(`Please ensure all fields are correctly filled.`, 'error');
+                        return;
+                    }
+                }
+                
+                // Check if credit limit is valid for calculation
+                if (data.revolvingCreditLimit <= 0) {
+                     showMessage('Revolving Credit Limit must be greater than zero.', 'error');
+                     return;
+                }
+                
+                // --- API Call ---
+                try {
+                    const response = await fetch("http://localhost:5000/predict", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(data)
+                    });
+
+                    // Check for HTTP errors (e.g., 404, 500)
+                    if (!response.ok) {
+                        const errorBody = await response.json().catch(() => ({ error: "Unknown server error." }));
+                        throw new Error(errorBody.error || `HTTP error! Status: ${response.status}`);
+                    }
+                    
+                    const result = await response.json();
+                    
+                    if (result.error) {
+                        showMessage(result.error, 'error');
+                        return;
+                    }
+
+                    // --- Process Backend Response for UI State ---
+                    
+                    const predictionData = {};
+                    predictionData.riskScore = clamp(Math.round(result.approvalProbability), 0, 100);
+                    predictionData.approvalProbability = result.approvalProbability;
+                    predictionData.isSpamFlagged = false; // As per user instruction (to be improved later)
+                    
+                    // Store input data for later ratio calculation for the Insights page
+                    predictionData.inputData = data;
+                    
+                    // Derive Ratios (for Insights Page)
+                    const loanToIncomeRatio = data.loanAmount / data.annualIncome;
+                    const debtToIncomeRatio = (data.monthlyDebt * 12) / data.annualIncome;
+                    const creditUtilizationRatio = data.creditCardDebt / data.revolvingCreditLimit;
+                    predictionData.ratios = { loanToIncomeRatio, debtToIncomeRatio, creditUtilizationRatio };
+
+                    // Derive UI Metadata based on API output (loanApproved/probability)
+                    let riskLabel, riskColor, approvalDecision, decisionColor;
+                    const prob = predictionData.riskScore; // Use the clamped score
+                    
+                    if (predictionData.isSpamFlagged) {
+                        approvalDecision = 'Declined (Fraud/Spam Flagged)';
+                        decisionColor = 'bg-red-800';
+                        riskLabel = 'Extreme Risk';
+                        riskColor = 'bg-gray-500';
+                    } else if (result.loanApproved) {
+                        approvalDecision = 'Approved';
+                        decisionColor = 'bg-emerald-600';
+                        riskLabel = prob >= 75 ? 'Low Risk' : 'Moderate Risk';
+                        riskColor = prob >= 75 ? 'bg-emerald-500' : 'bg-yellow-500';
+                    } else {
+                        approvalDecision = 'Declined';
+                        decisionColor = 'bg-red-600';
+                        riskLabel = prob < 50 ? 'High Risk' : 'Moderate Risk';
+                        riskColor = prob < 50 ? 'bg-red-500' : 'bg-yellow-500';
+                    }
+
+                    predictionData.riskLabel = riskLabel;
+                    predictionData.riskColor = riskColor;
+                    predictionData.approvalDecision = approvalDecision;
+                    predictionData.decisionColor = decisionColor;
+                    
+                    // Save final processed state
+                    state.prediction = predictionData;
+
+                    showMessage("Prediction Successful!", "success");
+                    showPage("results");
+
+                } catch (error) {
+                    console.error("Server Error:", error);
+                    showMessage(`Server Error: Could not connect to the prediction service at ${"http://localhost:5000/predict"}. Check your server logs.`, "error");
+                }
+            });
+        }
+
+        // --- 5. RENDER FUNCTIONS ---
+
+        /**
+         * Renders the Dashboard KPIs and initial mock chart.
+         */
+        function renderDashboard() {
+            const statCards = document.getElementById('stat-cards');
+            if (statCards) {
+                statCards.innerHTML = '';
+                const mockKPIs = [
+                    { title: 'Total Applications', value: state.mockDashboardData.totalApplications, icon: '📈', color: 'text-blue-400' },
+                    { title: 'Avg Approval Rate', value: state.mockDashboardData.avgApprovalRate, icon: '✅', color: 'text-emerald-400' },
+                    { title: 'Last 7 Day Volume', value: state.mockDashboardData.last7DayVolume, icon: '💰', color: 'text-yellow-400' },
+                    { title: 'Spam Detected', value: state.mockDashboardData.spamDetected, icon: '🚫', color: 'text-red-400' },
+                ];
+
+                mockKPIs.forEach(kpi => {
+                    statCards.innerHTML += `
+                        <div class="bg-gray-800 p-5 rounded-xl shadow-xl border-t-4 border-gray-700 hover:border-blue-500 transition duration-300 transform hover:scale-[1.02]">
+                            <p class="text-sm font-medium text-gray-400">${kpi.icon} ${kpi.title}</p>
+                            <p class="text-3xl font-extrabold ${kpi.color} mt-1">${kpi.value}</p>
+                        </div>
+                    `;
+                });
+            }
+
+            // Draw simple bar chart
+            drawApprovalChart();
+        }
+
+
+        /**
+         * Draws the simple bar chart for the dashboard.
+         */
+        function drawApprovalChart() {
+            const canvas = document.getElementById('approval-chart');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+
+            // Responsive canvas sizing
+            const updateCanvasSize = () => {
+                const container = canvas.parentElement;
+                canvas.width = container.clientWidth;
+                canvas.height = container.clientHeight;
+                ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear on resize
+                drawChartLogic(ctx, canvas.width, canvas.height);
+            };
+
+            const drawChartLogic = (ctx, W, H) => {
+                const data = [75, 78, 80, 82, 79]; // Mock Approval Rates
+                const labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+                const barWidth = 40;
+                const gap = (W - (data.length * barWidth)) / (data.length + 1);
+                const maxVal = 100;
+                const chartHeight = H - 40; // Allow space for labels
+
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.5)'; // Grid lines
+                ctx.font = '10px Inter';
+                ctx.textAlign = 'center';
+
+                data.forEach((value, index) => {
+                    const x = gap + index * (barWidth + gap);
+                    const barHeight = (value / maxVal) * chartHeight;
+                    const y = H - barHeight - 20; // 20px for x-axis label space
+
+                    // Bar color
+                    let color = '#2563EB'; // Blue
+                    if (value < 78) color = '#F59E0B'; // Yellow
+                    if (value > 80) color = '#0D9488'; // Teal
+
+                    ctx.fillStyle = color;
+                    ctx.fillRect(x, y, barWidth, barHeight);
+
+                    // Label (Rate)
+                    ctx.fillStyle = '#FFFFFF';
+                    ctx.fillText(`${value}%`, x + barWidth / 2, y - 5);
+
+                    // Label (Day)
+                    ctx.fillStyle = '#9CA3AF'; // Gray
+                    ctx.fillText(labels[index], x + barWidth / 2, H - 5);
+                });
+            };
+
+            updateCanvasSize();
+            window.addEventListener('resize', updateCanvasSize);
+        }
+
+        /**
+         * Renders the Results page with the prediction output.
+         * @param {object} result - The prediction result object.
+         */
+        function renderResults(result) {
+            const container = document.getElementById('results-content');
+
+            // Use data processed in the submit handler
+            const decisionColor = result.approvalDecision.includes('Declined') ? 'border-red-600' :
+                                  result.approvalDecision.includes('Approved') ? 'border-emerald-600' : 'border-yellow-600';
+
+            const spamMessage = result.isSpamFlagged
+                ? `<div class="bg-red-900/50 p-4 rounded-xl text-red-300 font-semibold mt-6 shadow-inner">
+                    <span class="text-xl">⚠️ Fraud/Spam Detection Flagged</span>
+                    <p class="text-sm mt-1">System detected potential fraud/spam risk.</p>
+                   </div>`
+                : `<div class="bg-emerald-900/50 p-4 rounded-xl text-emerald-300 font-semibold mt-6 shadow-inner">
+                    <span class="text-xl">🛡️ Clean Transaction</span>
+                    <p class="text-sm mt-1">No major fraud or spam patterns detected in the application data.</p>
+                   </div>`;
+
+            container.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <!-- Main Decision Card -->
+                    <div class="md:col-span-1 bg-gray-700/50 p-6 rounded-xl shadow-2xl border-l-4 ${decisionColor} flex flex-col justify-center items-center text-center">
+                        <p class="text-xl text-gray-400 font-medium">Final Decision</p>
+                        <span class="text-4xl font-extrabold mt-2 px-4 py-2 rounded-full text-white ${result.decisionColor} shadow-lg">
+                            ${result.approvalDecision}
+                        </span>
+                        <p class="text-sm text-gray-500 mt-2">Based on CreditPath AI Model v2.1</p>
+                    </div>
+
+                    <!-- Scores and Probability -->
+                    <div class="md:col-span-2 space-y-4">
+                        <div class="bg-gray-800 p-4 rounded-xl shadow-xl">
+                            <p class="text-sm text-gray-400 mb-1">CreditPath AI Risk Score (0-100)</p>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-full bg-gray-700 rounded-full h-4">
+                                    <div class="risk-progress-bar h-full rounded-full ${result.riskColor}" style="width: ${result.riskScore}%;"></div>
+                                </div>
+                                <span class="text-lg font-bold ${result.riskColor.replace('bg', 'text')}">${result.riskScore}</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-800 p-4 rounded-xl shadow-xl">
+                            <p class="text-sm text-gray-400 mb-1">Approval Probability</p>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-full bg-gray-700 rounded-full h-4">
+                                    <div class="risk-progress-bar h-full rounded-full bg-blue-500" style="width: ${result.approvalProbability}%;"></div>
+                                </div>
+                                <span class="text-lg font-bold text-blue-500">${result.approvalProbability.toFixed(1)}%</span>
+                            </div>
+                        </div>
+
+                        ${spamMessage}
+
+                        <!-- Quick Action Button -->
+                        <div class="pt-4">
+                            <button onclick="showPage('insights')" class="w-full text-white font-medium py-2 px-6 rounded-lg text-md
+                                                        bg-gray-700 hover:bg-teal-600 transition duration-300 ease-in-out">
+                                View Detailed Ratio Insights →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        /**
+         * Renders the Insights page with financial ratios and a mock chart.
+         * @param {object} result - The prediction result object.
+         */
+        function renderInsights(result) {
+            const ratioCards = document.getElementById('ratio-cards');
+            const { loanToIncomeRatio, debtToIncomeRatio, creditUtilizationRatio } = result.ratios;
+
+            // Define ratios to display
+            const ratios = [
+                {
+                    title: 'Loan-to-Income Ratio (LTI)',
+                    value: loanToIncomeRatio,
+                    max: 1.0,
+                    optimal: 0.3,
+                    formatter: (v) => (v * 100).toFixed(1) + '%',
+                    description: 'Measure of loan amount relative to income. Lower is generally better.',
+                    color: 'bg-emerald-500'
+                },
+                {
+                    title: 'Debt-to-Income Ratio (DTI, Annualized)',
+                    value: debtToIncomeRatio,
+                    max: 0.7,
+                    optimal: 0.4,
+                    formatter: (v) => (v * 100).toFixed(1) + '%',
+                    description: 'Total annual debt payments relative to annual income. Lower is better.',
+                    color: 'bg-yellow-500'
+                },
+                {
+                    title: 'Credit Utilization Ratio (CUR)',
+                    value: creditUtilizationRatio,
+                    max: 1.0,
+                    optimal: 0.3,
+                    formatter: (v) => (v * 100).toFixed(1) + '%',
+                    description: 'Percentage of available credit currently being used. Below 30% is ideal.',
+                    color: 'bg-blue-500'
+                },
+            ];
+
+            ratioCards.innerHTML = ratios.map(ratio => {
+                const percentage = clamp((ratio.value / ratio.max) * 100, 0, 100);
+                return `
+                    <div class="bg-gray-800 p-5 rounded-xl shadow-xl">
+                        <p class="text-lg font-semibold text-gray-300 mb-2">${ratio.title}</p>
+                        <span class="text-3xl font-extrabold ${ratio.color.replace('bg', 'text')}">${ratio.formatter(ratio.value)}</span>
+                        
+                        <div class="w-full bg-gray-700 rounded-full h-3 mt-3">
+                            <div class="h-full rounded-full ${ratio.color}" style="width: ${percentage}%;"></div>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2">${ratio.description}</p>
+                    </div>
+                `;
+            }).join('');
+
+            // Draw line chart
+            drawLineChart(result.riskScore);
+        }
+
+        /**
+         * Draws a mock trajectory line chart for the insights page.
+         * @param {number} finalRiskScore - The calculated final risk score.
+         */
+        function drawLineChart(finalRiskScore) {
+            const canvas = document.getElementById('insight-line-chart');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+
+            const updateCanvasSize = () => {
+                const container = canvas.parentElement;
+                canvas.width = container.clientWidth;
+                canvas.height = container.clientHeight;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                drawChartLogic(ctx, canvas.width, canvas.height, finalRiskScore);
+            };
+
+            const drawChartLogic = (ctx, W, H, finalScore) => {
+                // Mock historical data leading up to the final score
+                const dataPoints = [40, 55, 60, 70, finalScore];
+                const labels = ['Credit History', 'Income Check', 'Debt Ratio', 'Collateral Check', 'Final Score'];
+                const padding = 30;
+                const plotWidth = W - 2 * padding;
+                const plotHeight = H - 2 * padding;
+                const maxVal = 100;
+                const stepX = plotWidth / (dataPoints.length - 1);
+
+                ctx.strokeStyle = '#374151'; // Gray-700 for axes
+                ctx.fillStyle = '#9CA3AF'; // Gray-400 for text
+                ctx.lineWidth = 1;
+
+                // Draw background grid lines (every 25 points)
+                for (let i = 0; i <= 4; i++) {
+                    const y = padding + plotHeight * (i / 4);
+                    ctx.beginPath();
+                    ctx.moveTo(padding, y);
+                    ctx.lineTo(W - padding, y);
+                    ctx.stroke();
+                    ctx.fillText(100 - (i * 25), padding - 15, y + 3);
+                }
+
+                // Draw line graph
+                ctx.beginPath();
+                ctx.strokeStyle = '#0D9488'; // Teal
+                ctx.lineWidth = 3;
+                ctx.lineJoin = 'round';
+                ctx.shadowColor = '#0D9488';
+                ctx.shadowBlur = 5;
+
+                dataPoints.forEach((score, index) => {
+                    const x = padding + index * stepX;
+                    const y = H - padding - (score / maxVal) * plotHeight;
+
+                    if (index === 0) {
+                        ctx.moveTo(x, y);
+                    } else {
+                        ctx.lineTo(x, y);
+                    }
+
+                    // Draw point
+                    ctx.fillStyle = '#FFFFFF';
+                    ctx.beginPath();
+                    ctx.arc(x, y, 4, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    // Draw X-axis label
+                    ctx.fillStyle = '#9CA3AF';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(labels[index], x, H - 10);
+                });
+                ctx.stroke();
+
+                ctx.shadowBlur = 0; // Reset shadow
+            };
+
+            updateCanvasSize();
+            window.addEventListener('resize', updateCanvasSize);
+        }
+
+        // --- 6. INITIALIZATION ---
+
+        window.onload = () => {
+            // Start the application immediately on the dashboard page.
+            showPage('dashboard');
+        };
+    </script>
+</body>
+</html>
