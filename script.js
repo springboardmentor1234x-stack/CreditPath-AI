@@ -3,29 +3,32 @@ const API = "http://127.0.0.1:8000";
 
 document.addEventListener('DOMContentLoaded', () => {
   const token = localStorage.getItem('cpai_token');
-  if(!token) window.location.href = 'login.html';
+  if (!token) window.location.href = 'login.html';
 
   const predictBtn = document.getElementById('predictBtn');
   const clearBtn = document.getElementById('clearBtn');
   const closePopup = document.getElementById('closePopup');
-  const popupOverlay = document.getElementById('popupOverlay');
 
-  if(predictBtn) predictBtn.addEventListener('click', doPredict);
-  if(clearBtn) clearBtn.addEventListener('click', doClear);
-  if(closePopup) closePopup.addEventListener('click', ()=> popupOverlay.style.display = 'none');
+  if (predictBtn) predictBtn.addEventListener('click', doPredict);
+  if (clearBtn) clearBtn.addEventListener('click', doClear);
+  if (closePopup)
+    closePopup.addEventListener('click', () => {
+      document.getElementById('popupOverlay').style.display = 'none';
+    });
 
-  const logout = document.getElementById('logoutBtn');
-  if (logout){
-    logout.addEventListener('click', (e)=>{
+  // logout
+  const logoutBtn = document.getElementById('logoutBtn');
+  if (logoutBtn)
+    logoutBtn.addEventListener('click', (e) => {
       e.preventDefault();
       localStorage.removeItem('cpai_token');
       localStorage.removeItem('cpai_name');
       window.location.href = 'login.html';
     });
-  }
 });
 
-function gatherData(){
+// collect data
+function gatherData() {
   return {
     name: document.getElementById('b_name').value || "Unknown",
     age: parseInt(document.getElementById('b_age').value || 30),
@@ -37,45 +40,63 @@ function gatherData(){
   };
 }
 
-async function doPredict(){
+// do prediction
+async function doPredict() {
   const data = gatherData();
+
   try {
     const res = await fetch(`${API}/predict/`, {
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
     });
+
     const j = await res.json();
-    if(res.ok){
-      showPopup(j);
-    } else {
-      alert(j.detail || 'Prediction error');
+
+    if (!res.ok) {
+      alert(j.detail || "Prediction failed");
+      return;
     }
-  } catch (e) {
-    alert('Server unreachable');
+
+    showPopup(j);
+
+  } catch (err) {
+    console.error(err);
+    alert("Server unreachable");
   }
 }
 
-function showPopup(res){
+// show popup result
+function showPopup(res) {
+  const overlay = document.getElementById("popupOverlay");
+  overlay.style.display = "flex";
 
-  document.getElementById('p_emoji').innerText = res.emoji || '';
-  document.getElementById('p_name').innerText = res.name || 'Unknown';
-  document.getElementById('p_pred').innerText = 'Prediction: ' + (res.prediction || '—');
-  document.getElementById('p_prob').innerText = 'Probability: ' + (res.percentage !== undefined ? (res.percentage + '%') : '—');
-  document.getElementById('p_reason').innerText = 'Main reason: ' + (res.reason || '—');
-  document.getElementById('p_action').innerText = 'Recommended action: ' + (res.recommended_action || '—');
+  // emoji first
+  document.getElementById("p_emoji").innerText = res.emoji || "❗";
 
-  document.getElementById('popupOverlay').style.display = 'flex';
+  document.getElementById("p_name").innerText = res.name || "Unknown";
+  document.getElementById("p_pred").innerText = `Prediction: ${res.prediction}`;
+  document.getElementById("p_prob").innerText = `Probability: ${res.percentage}%`;
 
+  document.getElementById("p_reason").innerText =
+    res.reason ? `Main reason: ${res.reason}` : "";
 
-  const popupEl = document.getElementById('popupOverlay').querySelector('.popup');
-  popupEl.style.transform = 'translateY(-12px)';
-  setTimeout(()=> popupEl.style.transform = 'translateY(0)', 10);
+  document.getElementById("p_action").innerText =
+    res.action ? `Recommended action: ${res.action}` : "";
 }
 
-function doClear(){
-  ['b_name','b_age','b_income','b_loan','b_credit','b_debt','b_existing'].forEach(id=>{
+// clear form
+function doClear() {
+  [
+    "b_name",
+    "b_age",
+    "b_income",
+    "b_loan",
+    "b_credit",
+    "b_debt",
+    "b_existing",
+  ].forEach((id) => {
     const el = document.getElementById(id);
-    if(el) el.value = '';
+    if (el) el.value = "";
   });
 }
