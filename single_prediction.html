@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Single Prediction - CreditPath-AI</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container navbar">
@@ -25,57 +27,68 @@
       <div class="form-sub">Enter borrower details and click Predict</div>
 
       <div class="form-grid" style="margin-top:14px;">
+
         <div class="input-field">
           <label>Name</label>
           <input id="b_name" placeholder="e.g., John Doe">
         </div>
+
         <div class="input-field">
           <label>Age</label>
-          <input id="b_age" placeholder="e.g., 32" type="number">
+          <input id="b_age" type="number" placeholder="e.g., 32">
         </div>
+
         <div class="input-field">
           <label>Annual Income (₹)</label>
-          <input id="b_income" placeholder="e.g., 500000" type="number">
+          <input id="b_income" type="number" placeholder="e.g., 500000">
         </div>
 
         <div class="input-field">
           <label>Loan Amount (₹)</label>
-          <input id="b_loan" placeholder="e.g., 150000" type="number">
-        </div>
-        <div class="input-field">
-          <label>Credit Score</label>
-          <input id="b_credit" placeholder="300-900" type="number">
-        </div>
-        <div class="input-field">
-          <label>Debt-to-Income (%)</label>
-          <input id="b_debt" placeholder="e.g., 30" type="number">
+          <input id="b_loan" type="number" placeholder="e.g., 150000">
         </div>
 
-        <div class="full-row" style="grid-column: 1 / -1;">
+        <div class="input-field">
+          <label>Credit Score</label>
+          <input id="b_credit" type="number" placeholder="300-900">
+        </div>
+
+        <div class="input-field">
+          <label>Debt-to-Income (%)</label>
+          <input id="b_debt" type="number" placeholder="e.g., 30">
+        </div>
+
+        <div class="full-row">
           <div class="wide input-field">
             <label>Existing Loans</label>
-            <input id="b_existing" placeholder="e.g., 2" type="number">
+            <input id="b_existing" type="number" placeholder="e.g., 2">
           </div>
         </div>
+
       </div>
 
       <div class="form-actions">
         <button id="predictBtn" class="btn-predict">Predict</button>
         <button id="clearBtn" class="btn-clear">Clear</button>
       </div>
+
     </div>
   </div>
 
-  <!-- Popup (hidden initially) -->
+  <!-- popup -->
   <div id="popupOverlay" class="popup-overlay" style="display:none;">
-    <div class="popup" role="dialog" aria-modal="true">
-      <div id="p_emoji" class="emoji">❌</div>
+    <div class="popup">
+
+      <div id="p_emoji" class="emoji">❗</div>
+
       <h3 id="p_name">Borrower</h3>
       <p id="p_pred">Prediction: —</p>
       <p id="p_prob">Probability: —</p>
-      <div id="p_reason" class="reason"></div>
-      <div id="p_action" class="action"></div>
-      <div style="margin-top:8px;">
+
+      <p id="p_reason" style="margin-top:10px;"></p>
+      <p id="p_action" style="margin-top:6px;"></p>
+
+      <div style="margin-top:12px;">
         <button id="closePopup" class="close-btn">Close</button>
       </div>
     </div>
