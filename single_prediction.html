@@ -13,7 +13,7 @@
       <nav class="nav-right">
         <a href="index.html">Home</a>
         <a href="single_prediction.html" class="active">Single Prediction</a>
-        <a href="batch_prediction.html">Batch Prediction</a>
+        <a href="batch_prediction.html">Batch</a>
         <a id="logoutBtn" href="#">Logout</a>
       </nav>
     </div>
@@ -27,11 +27,11 @@
       <div class="form-grid" style="margin-top:14px;">
         <div class="input-field">
           <label>Name</label>
-          <input id="b_name" placeholder="e.g., Abc ">
+          <input id="b_name" placeholder="e.g., John Doe">
         </div>
         <div class="input-field">
           <label>Age</label>
-          <input id="b_age" placeholder="e.g., 25" type="number">
+          <input id="b_age" placeholder="e.g., 32" type="number">
         </div>
         <div class="input-field">
           <label>Annual Income (₹)</label>
@@ -48,13 +48,13 @@
         </div>
         <div class="input-field">
           <label>Debt-to-Income (%)</label>
-          <input id="b_debt" placeholder=" 1 - 100  " type="number">
+          <input id="b_debt" placeholder="e.g., 30" type="number">
         </div>
 
         <div class="full-row" style="grid-column: 1 / -1;">
           <div class="wide input-field">
             <label>Existing Loans</label>
-            <input id="b_existing" placeholder="e.g., 1" type="number">
+            <input id="b_existing" placeholder="e.g., 2" type="number">
           </div>
         </div>
       </div>
@@ -66,13 +66,15 @@
     </div>
   </div>
 
-  
+  <!-- Popup (hidden initially) -->
   <div id="popupOverlay" class="popup-overlay" style="display:none;">
     <div class="popup" role="dialog" aria-modal="true">
+      <div id="p_emoji" class="emoji">❌</div>
       <h3 id="p_name">Borrower</h3>
       <p id="p_pred">Prediction: —</p>
       <p id="p_prob">Probability: —</p>
-      <div id="p_emoji" class="emoji">❌</div>
+      <div id="p_reason" class="reason"></div>
+      <div id="p_action" class="action"></div>
       <div style="margin-top:8px;">
         <button id="closePopup" class="close-btn">Close</button>
       </div>
@@ -82,4 +84,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
