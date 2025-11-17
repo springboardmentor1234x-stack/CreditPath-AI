@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Batch Processing - CreditPath-AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <div class="brand">CreditPath-AI</div>
+      <nav class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="single_prediction.html">Single Prediction</a>
+        <a href="batch_prediction.html" class="active">Batch Prediction</a>
+        <a id="logoutBtn" href="#">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container" style="max-width:900px; margin-top:44px;">
+    <div class="form-wrap">
+      <h2 style="color:var(--teal-dark)">Upload Borrowers Data</h2>
+      <p style="color:var(--muted)">Upload a CSV (first row header). We'll return simulated risk results.</p>
+
+      <div style="border:3px dashed rgba(79,124,130,0.12); border-radius:16px; margin-top:18px; padding:42px; text-align:center; background: linear-gradient(180deg, #f8fbfd, #ffffff);">
+        <p style="font-size:20px; color:var(--muted)">Drag & Drop CSV file here</p>
+        <p style="color:var(--muted); margin-top:12px;">or</p>
+        <input id="fileInput" type="file" accept=".csv" style="display:none;">
+        <button id="chooseFile" class="btn btn-teal" style="padding:12px 26px;">Choose File</button>
+      </div>
+
+      <div id="batchResult" style="margin-top:18px;"></div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    const token = localStorage.getItem('cpai_token');
+    if(!token) location.href = 'login.html';
+
+    document.getElementById('chooseFile')
+      .addEventListener('click', ()=> document.getElementById('fileInput').click());
+
+    document.getElementById('fileInput')
+      .addEventListener('change', async (ev)=>{
+        const f = ev.target.files[0];
+        if(!f) return;
+
+        const fd = new FormData();
+        fd.append('file', f);
+
+        const resultBox = document.getElementById('batchResult');
+        resultBox.innerHTML = "Uploading...";
+
+        try{
+          const res = await fetch('http://127.0.0.1:8000/batch/', {
+            method:'POST',
+            body: fd
+          });
+          const j = await res.json();
+
+          if(!j.ok){
+            resultBox.innerHTML = `<p style="color:red;">${j.message}</p>`;
+            return;
+          }
+
+          // Build result table
+          let html = `<p>Processed ${j.count} rows.</p>`;
+          html += `
+            <table style="width:100%; margin-top:18px; border-collapse:collapse;">
+              <tr style="background:#eaf7fb; text-align:left;">
+                <th style="padding:12px;">Name</th>
+                <th style="padding:12px;">Prediction</th>
+                <th style="padding:12px;">Probability</th>
+                <th style="padding:12px;">Risk</th>
+              </tr>
+          `;
+
+          j.results.forEach(r=>{
+            html += `
+              <tr style="background:white; border-bottom:1px solid #e3eaea;">
+                <td style="padding:12px;">${r.name}</td>
+                <td style="padding:12px;">${r.prediction}</td>
+                <td style="padding:12px;">${r.percentage}%</td>
+                <td style="padding:12px; font-size:22px;">${r.emoji}</td>
+              </tr>
+            `;
+          });
+
+          html += `</table>`;
+          resultBox.innerHTML = html;
+
+        }catch(e){
+          resultBox.innerText = "Upload failed.";
+        }
+      });
+
+    document.getElementById('logoutBtn').addEventListener('click', (e)=>{
+      e.preventDefault();
+      localStorage.removeItem('cpai_token');
+      localStorage.removeItem('cpai_name');
+      window.location.href = 'login.html';
+    });
+  })();
+</script>
