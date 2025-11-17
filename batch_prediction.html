@@ -13,7 +13,7 @@
       <nav class="nav-right">
         <a href="index.html">Home</a>
         <a href="single_prediction.html">Single Prediction</a>
-        <a href="batch_prediction.html" class="active">Batch Prediction</a>
+        <a href="batch_prediction.html" class="active">Batch Processing</a>
         <a id="logoutBtn" href="#">Logout</a>
       </nav>
     </div>
@@ -22,7 +22,7 @@
   <div class="container" style="max-width:900px; margin-top:44px;">
     <div class="form-wrap">
       <h2 style="color:var(--teal-dark)">Upload Borrowers Data</h2>
-      <p style="color:var(--muted)">Upload a CSV (first row header). We'll return simulated risk results.</p>
+      <p style="color:var(--muted)">Upload a CSV (first row header). We'll return simulated risk results with reasons and recommended actions.</p>
 
       <div style="border:3px dashed rgba(79,124,130,0.12); border-radius:16px; margin-top:18px; padding:42px; text-align:center; background: linear-gradient(180deg, #f8fbfd, #ffffff);">
         <p style="font-size:20px; color:var(--muted)">Drag & Drop CSV file here</p>
@@ -66,28 +66,33 @@
             return;
           }
 
-          // Build result table
+          // Build result table with reason & action data
           let html = `<p>Processed ${j.count} rows.</p>`;
           html += `
             <table style="width:100%; margin-top:18px; border-collapse:collapse;">
-              <tr style="background:#eaf7fb; text-align:left;">
+              <tr style="background:#eaf7fb; text-align:center;">
                 <th style="padding:12px;">Name</th>
                 <th style="padding:12px;">Prediction</th>
                 <th style="padding:12px;">Probability</th>
+                <th style="padding:12px;">Reason</th>
+                <th style="padding:12px;">Recommended Action</th>
                 <th style="padding:12px;">Risk</th>
               </tr>
           `;
 
           j.results.forEach(r=>{
-            html += `
-              <tr style="background:white; border-bottom:1px solid #e3eaea;">
-                <td style="padding:12px;">${r.name}</td>
-                <td style="padding:12px;">${r.prediction}</td>
-                <td style="padding:12px;">${r.percentage}%</td>
-                <td style="padding:12px; font-size:22px;">${r.emoji}</td>
-              </tr>
-            `;
-          });
+          html += `
+            <tr style="background:white; border-bottom:1px solid #e3eaea;">
+              <td style="padding:12px;">${r.name}</td>
+              <td style="padding:12px;">${r.prediction}</td>
+              <td style="padding:12px;">${r.percentage}%</td>
+              <td style="padding:12px;">${r.reason}</td>
+              <td style="padding:12px;">${r.action}</td>
+              <td style="padding:12px; font-size:22px;">${r.emoji}</td>
+            </tr>
+          `;
+  
+        });
 
           html += `</table>`;
           resultBox.innerHTML = html;
@@ -105,3 +110,5 @@
     });
   })();
 </script>
+</body>
+</html>
