@@ -195,55 +195,108 @@ def explain_reason_and_action(prob, ratio, credit_score, debt_ratio, existing_lo
 
 @app.post("/predict/")
 def predict(data: PredictRequest):
+
     # --- heuristic scoring ---
     prob = 0.5
+    reasons = []      # <-- collect reasons
+    actions = []      # <-- collect actions
 
+    # Loan-to-income ratio
     ratio = data.loan_amount / (data.income + 1)
     if ratio > 2:
         prob += 0.25
+        reasons.append("Very high loan amount compared to income.")
+        actions.append("Reduce loan amount or increase income proof.")
     elif ratio > 1.5:
         prob += 0.15
+        reasons.append("High loan burden compared to income.")
+        actions.append("Provide additional income documents.")
     elif ratio < 0.8:
         prob -= 0.12
+        reasons.append("Healthy loan-to-income ratio.")
 
+    # Credit score
     if data.credit_score < 600:
         prob += 0.25
+        reasons.append("Low credit score.")
+        actions.append("Improve credit score before approval.")
+    elif data.credit_score < 700:
+        prob += 0.10
+        reasons.append("Average credit score.")
+        actions.append("Request recent credit report.")
     elif data.credit_score > 750:
-        prob -= 0.2
+        prob -= 0.20
+        reasons.append("Strong credit score.")
 
+    # DTI ratio
     if data.debt_to_income_ratio > 50:
         prob += 0.18
+        reasons.append("High debt-to-income ratio.")
+        actions.append("Reduce monthly liabilities.")
+    elif data.debt_to_income_ratio > 35:
+        prob += 0.10
+        reasons.append("Moderate debt-to-income ratio.")
     elif data.debt_to_income_ratio < 25:
-        prob -= 0.1
+        prob -= 0.10
+        reasons.append("Low debt burden.")
 
-    if data.existing_loans >= 3:
-        prob += 0.12
+    # Existing loans
+    if data.existing_loans >= 4:
+        prob += 0.18
+        reasons.append("Too many existing loans.")
+        actions.append("Close at least one existing loan.")
+    elif data.existing_loans == 3:
+        prob += 0.10
+        reasons.append("Multiple active loans.")
+    elif data.existing_loans == 0:
+        prob -= 0.05
+        reasons.append("No existing loan burden.")
 
+    # Age factor
+    if data.age < 21:
+        prob += 0.10
+        reasons.append("Very young borrower with limited history.")
+        actions.append("Request guarantor.")
+    elif data.age > 55:
+        prob += 0.05
+        reasons.append("Older age range.")
+    else:
+        reasons.append("Stable age range.")
+
+    # finalize probability
     prob = max(0.02, min(0.98, prob + random.uniform(-0.02, 0.02)))
     percentage = round(prob * 100, 2)
 
-    # Determine prediction & emoji
+    # assign risk
     if prob > 0.7:
         prediction = "High Risk"
         emoji = "❌"
+        final_action = "Call borrower immediately and request updated financial documents."
     elif prob > 0.4:
         prediction = "Moderate Risk"
         emoji = "❗"
+        final_action = "Review borrower documents and verify income stability."
     else:
         prediction = "Low Risk"
         emoji = "☑️"
+        final_action = "Proceed with approval after standard checks."
 
-    reason, recommended_action = explain_reason_and_action(
-        prob, ratio, data.credit_score, data.debt_to_income_ratio, data.existing_loans, data.age
-    )
+    # Prefer the strongest reason
+    main_reason = reasons[0] if reasons else "No major issues."
+
+    # If a specific action was triggered, use it
+    if actions:
+        recommended_action = actions[0]
+    else:
+        recommended_action = final_action
 
     return {
         "name": data.name,
         "prediction": prediction,
         "percentage": percentage,
         "emoji": emoji,
-        "reason": reason,
-        "recommended_action": recommended_action,
+        "reason": main_reason,
+        "action": recommended_action
     }
 
 
