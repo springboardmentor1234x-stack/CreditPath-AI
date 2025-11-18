@@ -26,6 +26,7 @@ app = FastAPI(
 )
 
 # --- Add CORS Middleware (FIXED: ALLOW ALL ORIGINS) ---
+# This allows your frontend (GitHub Pages) to talk to this backend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], # <--- FINAL FIX: Allows all domains to connect
