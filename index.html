@@ -30,11 +30,11 @@
 
       <div class="container stats" style="margin-top:10px;">
         <div class="stat">
-          <h2>99.07%</h2>
+          <h2>71.07%</h2>
           <p>Model Accuracy (AUC-ROC)</p>
         </div>
         <div class="stat">
-          <h2>95%</h2>
+          <h2>70%</h2>
           <p>Prediction Accuracy</p>
         </div>
         <div class="stat">
@@ -84,7 +84,7 @@
         return;
       }
       // fetch user count
-      fetch('http://127.0.0.1:8000/users/count')
+      fetch("https://credit-path-ai-5i5a.onrender.com/users/count")
         .then(r => r.json())
         .then(j => {
           if(j && typeof j.count !== 'undefined'){
@@ -101,3 +101,4 @@
   </script>
 </body>
 </html>
+
