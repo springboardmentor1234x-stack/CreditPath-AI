@@ -55,7 +55,9 @@
         resultBox.innerHTML = "Uploading...";
 
         try{
-          const res = await fetch('http://127.0.0.1:8000/batch/', {
+          //const res = await fetch('http://127.0.0.1:8000/batch/', 
+          const res = await fetch('https://credit-path-ai-5i5a.onrender.com/batch/', {
+
             method:'POST',
             body: fd
           });
@@ -112,3 +114,4 @@
 </script>
 </body>
 </html>
+
