@@ -1,0 +1,201 @@
+Customer_ID,Age,Gender,Marital_Status,Dependents,Education_Level,Employment_Status,Annual_Income,Credit_Score,Loan_Amount,Loan_Term,Interest_Rate,Debt_to_Income_Ratio,Existing_Loans_Count,Property_Ownership,Bank_Account_Balance,Late_Payments,Loan_Purpose,Region,Default_Status
+CUST0001,52,Male,Married,2,Graduate,Salaried,1144907,418,946996,60,16.19,47.21,0,Mortgaged,988278,0,Personal,Semi-Urban,1
+CUST0002,55,Female,Single,2,High School,Unemployed,763852,762,759118,120,12.42,55.21,2,Owned,348173,10,Education,Semi-Urban,0
+CUST0003,35,Male,Married,1,Graduate,Self-Employed,505950,563,1769971,24,8.14,57.49,3,Rented,636130,1,Business,Rural,1
+CUST0004,62,Female,Divorced,1,Postgraduate,Unemployed,782970,704,1100039,24,17.02,42.38,3,Owned,200301,9,Education,Urban,0
+CUST0005,64,Female,Divorced,3,Postgraduate,Unemployed,1055187,703,1082754,24,8.02,55.24,5,Owned,876904,0,Business,Rural,0
+CUST0006,62,Female,Single,3,High School,Self-Employed,273158,638,477232,24,13.68,43.76,4,Mortgaged,987997,3,Personal,Semi-Urban,0
+CUST0007,38,Female,Single,2,High School,Self-Employed,490877,754,1356147,60,16.17,25.94,1,Rented,428742,6,Education,Semi-Urban,0
+CUST0008,65,Male,Divorced,2,Graduate,Salaried,1210710,437,1254574,60,7.46,39.95,2,Rented,248736,5,Education,Urban,0
+CUST0009,44,Female,Single,3,Graduate,Unemployed,1036218,647,503575,60,13.21,57.0,4,Mortgaged,903913,0,Business,Urban,0
+CUST0010,28,Female,Single,0,High School,Salaried,533532,817,1494601,12,17.59,27.6,0,Mortgaged,367845,8,Home,Semi-Urban,1
+CUST0011,56,Male,Divorced,0,Postgraduate,Salaried,1305362,353,1350413,12,16.91,47.37,3,Owned,406855,1,Personal,Semi-Urban,1
+CUST0012,36,Female,Divorced,1,Graduate,Unemployed,1158128,675,1598041,120,9.3,16.78,2,Rented,868305,8,Education,Semi-Urban,1
+CUST0013,56,Female,Married,3,High School,Self-Employed,664363,685,670418,60,12.01,36.24,1,Owned,653884,2,Home,Semi-Urban,0
+CUST0014,55,Female,Married,1,Postgraduate,Unemployed,427061,627,786419,12,12.62,35.49,2,Mortgaged,703768,0,Business,Urban,1
+CUST0015,44,Female,Married,0,High School,Self-Employed,1426155,638,894563,180,8.12,43.06,1,Mortgaged,87968,6,Personal,Rural,1
+CUST0016,26,Female,Divorced,0,Graduate,Self-Employed,1292714,452,1747369,240,6.59,27.91,2,Mortgaged,527482,0,Home,Urban,1
+CUST0017,55,Female,Married,3,Postgraduate,Self-Employed,1154327,367,1109017,12,18.11,15.37,1,Owned,727835,9,Personal,Rural,0
+CUST0018,30,Female,Single,1,Graduate,Self-Employed,1100271,337,923757,24,12.75,58.81,2,Owned,377755,10,Education,Urban,0
+CUST0019,63,Female,Married,3,Graduate,Salaried,618579,511,1607245,120,6.97,32.16,0,Owned,604891,0,Home,Rural,1
+CUST0020,28,Male,Single,0,Graduate,Salaried,631994,403,719102,120,13.61,17.48,0,Mortgaged,50940,7,Personal,Urban,0
+CUST0021,38,Male,Single,2,Postgraduate,Salaried,437257,750,1292734,180,19.46,48.24,1,Rented,127935,5,Education,Semi-Urban,0
+CUST0022,49,Female,Divorced,1,Postgraduate,Unemployed,892512,671,113707,24,16.0,36.8,3,Mortgaged,378684,1,Education,Urban,1
+CUST0023,35,Female,Divorced,3,Graduate,Salaried,434650,407,1795115,12,6.09,47.17,2,Mortgaged,139841,10,Personal,Rural,1
+CUST0024,37,Male,Single,2,High School,Salaried,1198377,366,1451187,36,7.39,32.11,3,Owned,125005,0,Personal,Semi-Urban,1
+CUST0025,31,Female,Divorced,2,High School,Salaried,480012,521,1986111,60,13.96,14.57,1,Mortgaged,693106,10,Business,Semi-Urban,1
+CUST0026,57,Male,Single,3,Graduate,Unemployed,254252,454,474839,240,8.61,35.3,0,Rented,949842,4,Home,Urban,0
+CUST0027,42,Male,Single,3,High School,Unemployed,1294349,430,1208754,240,14.75,30.24,5,Owned,12075,5,Education,Rural,1
+CUST0028,60,Female,Divorced,3,Postgraduate,Self-Employed,865185,572,737743,24,5.97,47.17,0,Owned,512608,0,Home,Urban,0
+CUST0029,52,Male,Married,2,Graduate,Unemployed,466448,837,1063724,180,15.55,44.85,1,Rented,51419,5,Business,Rural,0
+CUST0030,61,Female,Single,3,High School,Salaried,372531,381,640443,60,5.95,37.03,5,Rented,971548,5,Business,Rural,1
+CUST0031,28,Female,Married,1,Postgraduate,Unemployed,1405834,309,1144028,240,17.64,59.3,1,Rented,120326,8,Personal,Rural,0
+CUST0032,49,Female,Single,1,High School,Salaried,915715,445,1434026,12,6.47,16.81,0,Owned,427554,6,Personal,Semi-Urban,0
+CUST0033,33,Male,Single,1,High School,Unemployed,600716,728,1111958,120,9.05,55.1,0,Mortgaged,919507,8,Business,Semi-Urban,0
+CUST0034,62,Male,Divorced,3,Postgraduate,Self-Employed,1005775,633,1996205,24,17.38,53.27,1,Rented,201880,2,Personal,Urban,0
+CUST0035,33,Female,Single,3,Graduate,Self-Employed,256782,818,857031,24,12.02,15.94,1,Rented,20681,8,Home,Rural,1
+CUST0036,27,Male,Single,2,High School,Salaried,756221,667,258992,12,15.56,18.34,3,Rented,122152,8,Education,Semi-Urban,1
+CUST0037,35,Male,Divorced,0,Graduate,Salaried,538664,462,526949,12,18.28,14.88,1,Mortgaged,301866,8,Business,Semi-Urban,0
+CUST0038,50,Male,Single,0,Postgraduate,Unemployed,783332,709,909446,60,8.01,45.31,0,Mortgaged,151935,1,Education,Semi-Urban,1
+CUST0039,28,Male,Married,2,High School,Self-Employed,352313,528,1396262,36,11.98,10.61,1,Mortgaged,299588,8,Education,Rural,0
+CUST0040,64,Male,Married,1,High School,Salaried,284664,406,1322941,120,6.78,58.25,2,Mortgaged,409901,9,Personal,Semi-Urban,1
+CUST0041,22,Female,Divorced,1,High School,Self-Employed,719833,692,50317,36,12.55,55.92,2,Rented,496457,6,Personal,Semi-Urban,1
+CUST0042,43,Female,Married,1,Postgraduate,Unemployed,211754,448,1549700,60,16.0,57.1,3,Mortgaged,28953,8,Business,Rural,1
+CUST0043,34,Male,Married,1,Graduate,Unemployed,779159,598,1429298,24,14.91,13.41,5,Rented,493502,4,Home,Semi-Urban,0
+CUST0044,27,Female,Single,3,High School,Unemployed,657114,431,1720299,24,16.59,34.67,3,Mortgaged,675066,1,Home,Semi-Urban,1
+CUST0045,34,Female,Married,1,High School,Unemployed,750135,696,160204,180,17.53,23.17,3,Mortgaged,992251,0,Home,Urban,1
+CUST0046,21,Female,Married,2,High School,Unemployed,258758,410,1493036,240,14.18,32.86,3,Mortgaged,98455,9,Business,Rural,0
+CUST0047,28,Female,Divorced,0,Graduate,Salaried,1100844,495,1930283,24,6.45,13.29,1,Owned,904920,8,Personal,Rural,1
+CUST0048,58,Male,Single,3,High School,Self-Employed,287697,394,1174224,240,18.66,53.83,4,Owned,873842,8,Personal,Rural,0
+CUST0049,44,Female,Married,0,Graduate,Unemployed,343084,829,250850,12,9.74,28.58,4,Owned,441850,2,Home,Semi-Urban,1
+CUST0050,28,Female,Single,1,Graduate,Salaried,1198711,492,744524,36,17.02,18.54,5,Owned,670943,6,Education,Urban,0
+CUST0051,46,Female,Married,2,Graduate,Self-Employed,450090,700,1178447,24,10.85,59.14,4,Mortgaged,635244,8,Home,Urban,0
+CUST0052,55,Male,Married,0,Postgraduate,Self-Employed,496110,558,132240,240,11.46,55.6,1,Rented,760919,7,Education,Urban,1
+CUST0053,61,Female,Divorced,1,Graduate,Salaried,1491220,650,1670778,240,17.43,47.69,2,Mortgaged,945610,6,Business,Rural,1
+CUST0054,32,Female,Single,2,Postgraduate,Unemployed,209075,387,1941962,60,17.4,59.87,1,Mortgaged,711382,7,Business,Semi-Urban,0
+CUST0055,55,Female,Married,1,Postgraduate,Self-Employed,272084,620,376181,180,16.12,51.45,5,Owned,959872,9,Home,Rural,0
+CUST0056,63,Male,Single,1,High School,Unemployed,898824,582,1211051,240,9.74,27.42,3,Rented,996759,3,Education,Rural,0
+CUST0057,23,Male,Single,1,High School,Salaried,967066,481,1678081,36,19.96,17.29,1,Owned,858847,8,Home,Rural,0
+CUST0058,39,Male,Married,2,High School,Salaried,505549,340,568439,180,17.8,27.47,5,Rented,526125,7,Personal,Semi-Urban,1
+CUST0059,37,Female,Single,0,High School,Self-Employed,1397783,469,928243,36,10.26,57.63,5,Rented,250873,6,Personal,Rural,1
+CUST0060,50,Male,Married,0,Graduate,Self-Employed,1158645,847,708155,60,11.55,54.12,1,Owned,752581,4,Personal,Semi-Urban,1
+CUST0061,47,Female,Divorced,2,Graduate,Unemployed,332673,372,974600,36,11.52,38.66,1,Owned,37411,0,Personal,Rural,0
+CUST0062,29,Male,Married,3,Graduate,Unemployed,1034025,842,397322,180,6.36,57.67,2,Owned,888370,2,Education,Semi-Urban,0
+CUST0063,43,Female,Single,1,Graduate,Unemployed,1246067,637,960589,12,18.16,48.87,5,Rented,476613,2,Personal,Semi-Urban,1
+CUST0064,48,Male,Single,2,Postgraduate,Self-Employed,835255,794,1689782,36,19.01,38.76,5,Rented,923683,5,Business,Urban,1
+CUST0065,45,Female,Married,2,Graduate,Self-Employed,654255,403,1775514,24,6.06,28.29,5,Mortgaged,575398,2,Personal,Semi-Urban,1
+CUST0066,38,Female,Single,0,Postgraduate,Unemployed,1206671,700,503264,180,16.06,23.62,0,Mortgaged,197666,6,Personal,Rural,1
+CUST0067,43,Female,Single,3,Graduate,Unemployed,1039795,540,1206916,60,13.23,36.53,2,Owned,48135,3,Personal,Urban,1
+CUST0068,32,Male,Divorced,1,High School,Salaried,855928,465,1984226,24,19.34,50.5,5,Rented,214043,9,Business,Semi-Urban,1
+CUST0069,54,Male,Single,1,High School,Self-Employed,825608,509,782937,60,11.24,16.34,2,Mortgaged,102661,1,Education,Semi-Urban,0
+CUST0070,63,Female,Divorced,1,High School,Self-Employed,361886,538,999972,60,6.38,39.18,0,Owned,245799,7,Personal,Rural,1
+CUST0071,59,Male,Divorced,1,Postgraduate,Salaried,968066,369,195451,120,14.68,17.22,4,Mortgaged,803651,5,Personal,Urban,1
+CUST0072,30,Female,Divorced,2,High School,Salaried,1104471,490,1977116,12,16.33,26.72,4,Mortgaged,614461,6,Education,Urban,1
+CUST0073,42,Female,Married,1,Postgraduate,Self-Employed,217514,753,835759,60,16.36,59.03,4,Rented,251418,2,Personal,Rural,1
+CUST0074,26,Male,Divorced,0,Postgraduate,Unemployed,484340,638,115633,120,10.64,53.17,0,Rented,857977,6,Education,Rural,0
+CUST0075,61,Female,Single,0,Postgraduate,Self-Employed,430960,510,465682,60,12.78,27.53,0,Owned,55207,8,Education,Rural,0
+CUST0076,24,Female,Single,3,Postgraduate,Self-Employed,876101,716,1583405,120,16.74,22.02,5,Owned,805495,4,Personal,Semi-Urban,1
+CUST0077,61,Female,Single,1,Graduate,Self-Employed,280948,803,1389029,36,17.48,48.14,2,Mortgaged,2674,6,Business,Semi-Urban,0
+CUST0078,31,Female,Single,0,Postgraduate,Self-Employed,772149,570,629196,240,19.58,51.3,3,Rented,50980,5,Home,Rural,0
+CUST0079,50,Male,Single,2,Postgraduate,Self-Employed,441300,456,316176,120,8.54,30.63,2,Mortgaged,965967,10,Education,Rural,0
+CUST0080,32,Female,Single,2,Graduate,Unemployed,425285,750,1434011,180,19.32,41.13,0,Rented,962476,2,Education,Rural,1
+CUST0081,65,Female,Married,2,Postgraduate,Self-Employed,755945,515,1369799,240,12.51,25.99,1,Rented,806990,5,Home,Urban,1
+CUST0082,50,Male,Divorced,1,High School,Unemployed,319049,743,914497,36,17.09,50.36,3,Rented,292956,3,Business,Semi-Urban,1
+CUST0083,29,Male,Divorced,3,High School,Self-Employed,1000833,514,647136,120,8.89,27.66,0,Rented,418445,2,Personal,Semi-Urban,0
+CUST0084,30,Female,Divorced,1,Postgraduate,Self-Employed,211548,563,310036,240,7.13,25.81,0,Owned,861606,4,Business,Urban,1
+CUST0085,62,Female,Married,0,High School,Salaried,1086207,792,1322207,180,18.88,58.36,0,Rented,897813,1,Home,Rural,1
+CUST0086,28,Female,Married,1,Postgraduate,Self-Employed,1448013,303,460621,240,13.35,23.15,2,Owned,913807,0,Personal,Semi-Urban,1
+CUST0087,23,Male,Single,0,Graduate,Unemployed,872183,850,1234354,36,11.13,48.19,2,Rented,830603,1,Business,Rural,1
+CUST0088,53,Female,Divorced,3,Postgraduate,Self-Employed,299858,711,1006149,36,17.34,52.25,5,Mortgaged,588527,3,Personal,Rural,0
+CUST0089,29,Male,Married,3,Graduate,Unemployed,735261,428,210729,120,19.64,38.86,0,Mortgaged,416746,1,Business,Semi-Urban,1
+CUST0090,65,Male,Divorced,0,High School,Unemployed,393153,430,1584383,24,8.59,28.01,2,Mortgaged,811021,8,Personal,Urban,0
+CUST0091,65,Female,Single,1,High School,Salaried,1361837,566,1970409,12,7.54,34.18,5,Owned,456333,9,Education,Urban,1
+CUST0092,48,Female,Single,1,High School,Self-Employed,316248,334,652547,24,10.54,10.7,2,Mortgaged,670376,8,Personal,Rural,1
+CUST0093,57,Female,Divorced,2,High School,Salaried,604936,560,198513,240,12.92,11.96,2,Owned,544647,5,Education,Rural,0
+CUST0094,44,Male,Divorced,1,High School,Salaried,867567,650,921471,24,19.3,13.81,3,Rented,669761,9,Home,Urban,0
+CUST0095,42,Female,Divorced,3,Postgraduate,Salaried,971936,825,920043,180,7.62,33.01,3,Owned,790437,4,Business,Semi-Urban,1
+CUST0096,29,Female,Divorced,0,High School,Salaried,799381,805,1269208,120,16.18,31.17,5,Mortgaged,338450,0,Business,Urban,1
+CUST0097,38,Male,Divorced,1,High School,Unemployed,1013987,532,902319,180,11.14,24.02,1,Mortgaged,580484,7,Home,Urban,1
+CUST0098,65,Female,Divorced,1,High School,Salaried,421422,399,893905,120,11.33,23.49,1,Owned,149177,9,Business,Rural,0
+CUST0099,33,Female,Married,1,Graduate,Self-Employed,597273,360,1117366,180,14.63,22.9,1,Owned,166571,10,Personal,Semi-Urban,0
+CUST0100,50,Female,Married,0,Postgraduate,Salaried,462814,546,1312367,120,18.87,28.05,5,Rented,819553,1,Home,Semi-Urban,1
+CUST0101,34,Male,Single,0,High School,Unemployed,995736,363,1376761,240,19.0,42.76,0,Rented,38706,6,Personal,Urban,0
+CUST0102,37,Female,Divorced,0,Graduate,Salaried,557078,547,631905,180,6.66,17.04,1,Rented,74868,4,Home,Semi-Urban,1
+CUST0103,62,Female,Divorced,2,Postgraduate,Unemployed,563354,606,943871,120,12.73,46.61,3,Mortgaged,179865,5,Education,Rural,1
+CUST0104,54,Female,Divorced,1,Postgraduate,Self-Employed,1001247,588,1173909,240,19.44,19.38,2,Mortgaged,934092,1,Education,Rural,0
+CUST0105,29,Male,Divorced,0,High School,Self-Employed,931069,836,1292513,12,9.65,28.85,3,Owned,349638,1,Education,Urban,1
+CUST0106,30,Male,Married,1,Postgraduate,Unemployed,1113058,372,356603,12,16.5,58.74,1,Owned,602955,7,Home,Semi-Urban,0
+CUST0107,59,Male,Divorced,1,Postgraduate,Self-Employed,706580,319,1532837,240,9.1,32.92,3,Mortgaged,378349,3,Business,Rural,1
+CUST0108,63,Female,Single,1,Postgraduate,Salaried,715839,533,1666076,120,18.81,45.93,1,Owned,460273,1,Personal,Semi-Urban,0
+CUST0109,31,Male,Divorced,3,Postgraduate,Salaried,1297370,469,703986,36,16.26,52.83,3,Rented,302804,7,Personal,Semi-Urban,1
+CUST0110,64,Female,Married,2,Graduate,Salaried,541807,547,990209,36,13.3,10.81,5,Mortgaged,178817,4,Personal,Semi-Urban,0
+CUST0111,64,Male,Divorced,0,High School,Salaried,813468,453,811760,240,8.64,59.45,5,Rented,16795,10,Home,Semi-Urban,1
+CUST0112,39,Female,Married,0,Postgraduate,Self-Employed,1264603,471,253863,24,18.84,15.75,3,Rented,842569,8,Personal,Urban,0
+CUST0113,65,Male,Married,1,Graduate,Self-Employed,1423674,469,90494,60,19.54,42.69,0,Owned,726687,1,Personal,Urban,0
+CUST0114,59,Male,Single,1,High School,Salaried,881752,509,54856,240,12.68,40.83,1,Mortgaged,708846,1,Personal,Urban,1
+CUST0115,53,Male,Married,0,Graduate,Unemployed,1228082,336,617466,120,13.64,18.81,0,Owned,77571,6,Home,Urban,1
+CUST0116,24,Male,Divorced,1,Postgraduate,Self-Employed,1390033,609,464497,240,10.53,51.93,1,Owned,831279,9,Home,Urban,1
+CUST0117,60,Male,Single,2,Postgraduate,Salaried,1370410,710,1265480,12,5.03,47.36,4,Rented,825446,3,Education,Rural,1
+CUST0118,21,Male,Married,1,Graduate,Self-Employed,1497491,687,1368870,12,19.34,48.91,0,Mortgaged,817740,10,Business,Urban,1
+CUST0119,50,Female,Single,0,High School,Self-Employed,1354493,398,789501,180,14.61,59.21,1,Owned,376526,8,Business,Semi-Urban,1
+CUST0120,64,Female,Divorced,3,Postgraduate,Salaried,423205,365,1103264,36,9.69,22.4,2,Owned,87359,7,Education,Semi-Urban,1
+CUST0121,52,Female,Married,1,High School,Unemployed,414405,467,348552,36,14.38,49.72,4,Owned,431239,6,Personal,Semi-Urban,0
+CUST0122,55,Male,Single,3,High School,Self-Employed,616053,818,759207,12,14.11,46.32,0,Rented,581195,2,Home,Rural,0
+CUST0123,49,Male,Divorced,1,High School,Self-Employed,824199,357,1671913,180,17.33,33.04,2,Mortgaged,742523,8,Personal,Rural,1
+CUST0124,49,Male,Married,2,Postgraduate,Self-Employed,1248782,374,1749503,60,5.3,19.6,5,Rented,774157,3,Education,Urban,0
+CUST0125,27,Male,Married,1,High School,Unemployed,1179104,417,313488,24,13.38,44.72,5,Owned,479287,4,Business,Rural,0
+CUST0126,54,Female,Single,2,Graduate,Self-Employed,200203,725,1329678,60,6.57,22.37,4,Rented,271319,7,Education,Semi-Urban,1
+CUST0127,63,Female,Single,2,Postgraduate,Salaried,516754,492,950280,180,18.63,14.67,3,Rented,299541,2,Personal,Semi-Urban,1
+CUST0128,51,Female,Divorced,3,Postgraduate,Salaried,258678,420,738496,180,9.33,11.56,1,Rented,15575,1,Education,Urban,1
+CUST0129,26,Female,Divorced,1,Graduate,Salaried,1373640,400,1682295,180,11.18,51.37,3,Rented,735202,0,Education,Urban,1
+CUST0130,53,Male,Married,3,Graduate,Self-Employed,218166,446,619884,240,13.93,38.18,5,Rented,169661,1,Business,Rural,0
+CUST0131,51,Male,Married,1,Graduate,Salaried,1292154,449,977245,36,13.41,38.52,1,Mortgaged,2334,0,Home,Urban,1
+CUST0132,21,Male,Divorced,3,High School,Unemployed,918350,661,1816090,180,14.41,37.29,1,Rented,476061,6,Home,Rural,1
+CUST0133,34,Male,Divorced,2,Postgraduate,Unemployed,979880,421,1095828,120,14.71,54.21,0,Rented,418745,4,Education,Semi-Urban,0
+CUST0134,37,Male,Divorced,2,High School,Self-Employed,345403,756,227888,60,11.02,25.92,5,Mortgaged,618102,8,Personal,Urban,0
+CUST0135,65,Male,Married,1,Graduate,Self-Employed,375400,516,883438,180,15.6,42.22,4,Rented,150040,2,Education,Rural,0
+CUST0136,43,Male,Divorced,2,Graduate,Unemployed,1250298,467,1635713,60,5.26,26.91,3,Rented,915268,10,Business,Semi-Urban,0
+CUST0137,62,Female,Single,1,Graduate,Self-Employed,252316,459,1196507,240,10.21,17.24,0,Rented,242278,10,Education,Rural,1
+CUST0138,48,Male,Single,0,Graduate,Salaried,203345,604,534519,12,6.87,50.04,3,Owned,611017,8,Personal,Semi-Urban,1
+CUST0139,34,Male,Single,0,Graduate,Salaried,970084,510,1769910,12,10.67,29.73,0,Rented,43037,8,Business,Semi-Urban,1
+CUST0140,36,Male,Married,0,Graduate,Unemployed,686754,420,661105,60,12.07,30.68,1,Rented,548608,3,Personal,Semi-Urban,0
+CUST0141,39,Male,Married,3,High School,Unemployed,635465,542,1433217,120,8.02,11.31,2,Owned,415284,10,Business,Semi-Urban,0
+CUST0142,39,Male,Married,1,High School,Self-Employed,868135,450,927481,36,14.39,22.01,5,Mortgaged,971265,8,Business,Urban,0
+CUST0143,47,Female,Married,3,Graduate,Self-Employed,975454,310,687644,36,5.89,52.25,4,Mortgaged,824386,0,Home,Urban,0
+CUST0144,43,Male,Married,1,Graduate,Unemployed,211543,593,758794,180,10.09,36.93,5,Owned,554863,9,Business,Semi-Urban,1
+CUST0145,32,Female,Married,0,Graduate,Self-Employed,1144800,721,67155,24,15.56,30.07,1,Mortgaged,630843,2,Home,Urban,1
+CUST0146,54,Female,Single,2,Graduate,Salaried,1054713,409,1785280,240,12.14,15.49,5,Rented,294789,9,Education,Rural,0
+CUST0147,41,Male,Divorced,3,Postgraduate,Salaried,963525,705,1165418,60,18.56,39.89,1,Rented,545026,3,Education,Rural,1
+CUST0148,57,Female,Divorced,3,Postgraduate,Salaried,840074,815,1291676,120,8.76,54.3,1,Rented,770078,4,Home,Rural,1
+CUST0149,31,Female,Single,0,Graduate,Salaried,379164,702,289185,24,5.66,23.23,5,Rented,112501,5,Personal,Urban,1
+CUST0150,48,Female,Single,1,High School,Unemployed,1466927,487,104655,12,9.88,29.93,3,Rented,882786,10,Business,Urban,0
+CUST0151,46,Male,Married,1,Postgraduate,Unemployed,997263,498,1953161,36,12.5,25.29,1,Mortgaged,393829,1,Business,Rural,1
+CUST0152,33,Male,Single,3,High School,Salaried,1189966,564,1456768,120,10.31,40.0,5,Rented,487890,10,Education,Urban,1
+CUST0153,55,Male,Divorced,0,High School,Salaried,1155272,669,1744311,120,8.76,46.16,0,Mortgaged,730809,7,Education,Semi-Urban,0
+CUST0154,44,Female,Divorced,3,High School,Unemployed,1025416,486,78815,180,12.15,14.79,4,Mortgaged,313072,8,Home,Urban,1
+CUST0155,47,Male,Divorced,2,Graduate,Salaried,858320,341,929250,36,17.59,47.14,5,Rented,595128,5,Personal,Semi-Urban,0
+CUST0156,48,Female,Divorced,3,Graduate,Unemployed,1265899,635,1310860,12,13.69,30.92,5,Rented,549602,2,Business,Semi-Urban,1
+CUST0157,49,Female,Single,0,High School,Unemployed,864673,332,99600,180,18.06,30.39,2,Mortgaged,300893,8,Business,Rural,1
+CUST0158,51,Male,Single,1,Postgraduate,Self-Employed,1284494,467,751395,120,17.7,37.13,5,Rented,720474,0,Business,Urban,1
+CUST0159,65,Male,Married,1,Graduate,Self-Employed,1454091,321,1073085,12,15.85,33.04,1,Owned,165757,0,Business,Semi-Urban,0
+CUST0160,47,Female,Divorced,1,Graduate,Salaried,763878,824,1029893,24,18.08,17.46,0,Owned,216476,7,Personal,Urban,0
+CUST0161,25,Male,Single,0,Graduate,Salaried,281678,743,1746452,120,10.74,48.56,2,Owned,812528,5,Education,Urban,1
+CUST0162,42,Female,Single,1,Postgraduate,Self-Employed,1394934,646,378561,24,8.49,32.38,1,Mortgaged,664208,5,Education,Rural,0
+CUST0163,41,Female,Divorced,2,Graduate,Self-Employed,793228,660,1334022,180,6.38,14.38,3,Mortgaged,188932,9,Business,Rural,1
+CUST0164,33,Female,Divorced,3,Postgraduate,Unemployed,797778,423,1716315,36,13.54,12.49,2,Owned,698077,10,Personal,Rural,1
+CUST0165,62,Female,Single,0,Postgraduate,Self-Employed,1117947,358,1802588,12,14.28,23.28,1,Owned,174865,0,Business,Rural,1
+CUST0166,34,Male,Married,1,Postgraduate,Self-Employed,882016,413,1836752,60,13.55,23.79,3,Mortgaged,445953,0,Home,Rural,1
+CUST0167,39,Male,Married,1,Graduate,Salaried,1392283,474,53679,120,8.79,13.02,2,Rented,317074,7,Personal,Rural,0
+CUST0168,51,Female,Single,3,Graduate,Unemployed,411152,826,1438951,180,18.46,39.15,0,Owned,461874,2,Business,Urban,1
+CUST0169,22,Female,Married,1,Graduate,Salaried,754000,711,168291,12,18.16,23.85,3,Owned,319025,6,Business,Rural,0
+CUST0170,42,Female,Married,1,High School,Salaried,1313101,440,694541,180,11.1,10.18,5,Rented,266493,1,Personal,Rural,1
+CUST0171,27,Male,Divorced,3,Graduate,Salaried,1320720,322,832769,24,10.79,50.92,5,Owned,540850,6,Education,Rural,1
+CUST0172,62,Female,Divorced,3,High School,Salaried,298271,647,802724,36,8.03,11.09,5,Rented,842020,5,Business,Semi-Urban,1
+CUST0173,42,Female,Single,3,High School,Self-Employed,673838,457,555517,240,19.68,50.71,2,Mortgaged,239769,8,Home,Semi-Urban,0
+CUST0174,31,Female,Single,0,High School,Self-Employed,1294634,728,284888,120,9.48,41.22,0,Rented,789891,0,Business,Rural,1
+CUST0175,60,Male,Single,2,Postgraduate,Self-Employed,1000845,645,273881,240,14.84,29.13,3,Mortgaged,771378,4,Business,Urban,0
+CUST0176,62,Male,Married,2,Postgraduate,Unemployed,1361821,496,1457713,12,15.15,10.2,4,Owned,715733,5,Business,Rural,0
+CUST0177,64,Female,Divorced,0,Postgraduate,Self-Employed,929946,584,1663607,180,11.23,51.39,3,Owned,381626,6,Business,Semi-Urban,0
+CUST0178,44,Male,Single,3,Postgraduate,Salaried,1080425,580,774593,36,9.23,31.06,3,Mortgaged,365009,1,Education,Semi-Urban,0
+CUST0179,50,Female,Single,0,High School,Salaried,572349,431,1058039,120,16.05,58.08,4,Owned,146067,3,Home,Rural,0
+CUST0180,52,Male,Divorced,3,Postgraduate,Self-Employed,471393,772,114163,180,9.12,48.09,1,Mortgaged,426927,2,Education,Urban,1
+CUST0181,28,Female,Married,0,High School,Self-Employed,680313,626,1424636,120,11.93,23.28,2,Mortgaged,781190,7,Personal,Semi-Urban,1
+CUST0182,26,Male,Divorced,1,Graduate,Unemployed,966683,777,487695,24,7.08,49.39,3,Rented,506664,3,Education,Rural,1
+CUST0183,32,Male,Married,1,Postgraduate,Salaried,1466967,432,1590490,60,18.81,32.74,5,Mortgaged,530171,8,Personal,Rural,0
+CUST0184,31,Male,Married,2,High School,Salaried,708074,303,1787203,240,8.79,16.18,1,Owned,658706,1,Personal,Semi-Urban,1
+CUST0185,24,Female,Married,3,Postgraduate,Self-Employed,1409205,414,390343,180,16.15,18.05,5,Rented,891395,4,Business,Rural,1
+CUST0186,51,Male,Married,0,High School,Self-Employed,1393169,461,1081509,60,9.11,50.32,2,Owned,149639,3,Home,Semi-Urban,0
+CUST0187,64,Female,Married,3,Postgraduate,Self-Employed,1466694,451,472836,24,17.62,55.49,0,Owned,697235,10,Personal,Urban,0
+CUST0188,63,Female,Divorced,0,Postgraduate,Self-Employed,466604,773,1897648,24,9.41,40.22,5,Rented,80840,2,Personal,Semi-Urban,1
+CUST0189,49,Male,Single,1,Postgraduate,Salaried,1122929,817,988902,120,6.47,30.27,3,Rented,567786,2,Business,Rural,1
+CUST0190,21,Female,Divorced,1,High School,Unemployed,861786,536,331048,36,9.47,48.77,2,Rented,275673,1,Business,Urban,0
+CUST0191,53,Female,Married,1,Postgraduate,Unemployed,806235,745,190697,60,19.8,36.82,4,Mortgaged,401814,4,Personal,Rural,1
+CUST0192,28,Male,Divorced,1,High School,Salaried,844410,827,1010384,12,19.08,12.38,3,Rented,320298,1,Education,Semi-Urban,1
+CUST0193,35,Male,Married,1,High School,Salaried,1036671,515,1222018,60,8.75,43.41,3,Rented,113350,6,Business,Semi-Urban,0
+CUST0194,61,Male,Divorced,2,Graduate,Salaried,758962,541,1101383,60,6.33,13.94,1,Mortgaged,276851,0,Personal,Semi-Urban,1
+CUST0195,33,Male,Married,3,Postgraduate,Salaried,780866,325,102182,120,10.45,44.87,1,Rented,905167,4,Home,Semi-Urban,1
+CUST0196,30,Female,Married,1,High School,Salaried,251377,823,1490005,180,14.76,21.62,1,Owned,406356,10,Business,Semi-Urban,1
+CUST0197,23,Male,Single,1,High School,Salaried,1123699,755,429761,180,5.39,48.88,4,Mortgaged,8760,2,Home,Semi-Urban,0
+CUST0198,38,Female,Divorced,3,Postgraduate,Self-Employed,1022665,623,986485,180,5.32,47.89,0,Mortgaged,286339,7,Education,Rural,0
+CUST0199,47,Male,Married,1,Graduate,Self-Employed,465770,768,1945180,24,17.32,58.89,2,Rented,907335,0,Personal,Rural,1
+CUST0200,28,Female,Divorced,0,High School,Salaried,833561,849,310139,120,10.39,17.54,5,Mortgaged,409825,5,Home,Rural,0
