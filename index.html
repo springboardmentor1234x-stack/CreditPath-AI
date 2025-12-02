@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Path AI - Smart Loan Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="header-section">
+        <h1 class="main-title">Credit Path AI</h1>
+        <p class="subtitle">Smart Loan Application Platform</p>
+    </div>
+    
+    <div class="form-container">
+        <h2>Apply for a Loan</h2>
+        <p class="instruction">Please fill in all the required information accurately. All fields marked with * are mandatory.</p>
+
+        <form id="loanForm">
+
+            <fieldset class="section-fieldset">
+                <legend class="section-title">| Personal Information</legend>
+                
+                <div class="form-group full-width">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contactEmail">Email Address *</label>
+                        <input type="email" id="contactEmail" name="contactEmail" required placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number *</label>
+                        <input type="text" id="phoneNumber" name="phoneNumber" required pattern="[0-9]{10,}" title="Please enter a valid phone number (min 10 digits)" placeholder="e.g., 9876543210">
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="age">Age *</label>
+                    <input type="number" id="age" name="age" required min="18" max="100" placeholder="e.g., 31">
+                </div>
+            </fieldset>
+
+            <fieldset class="section-fieldset">
+                <legend class="section-title">| Financial Information</legend>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="annualIncome">Annual Income ($) *</label>
+                        <input type="number" id="annualIncome" name="annualIncome" required min="10000" placeholder="e.g., 750000">
+                    </div>
+                    <div class="form-group">
+                        <label for="employmentStatus">Employment Status *</label>
+                        <select id="employmentStatus" name="employmentStatus" required>
+                            <option value="">Select status</option>
+                            <option value="Employed">Employed</option>
+                            <option value="Self-Employed">Self-Employed</option>
+                            <option value="Unemployed">Unemployed</option>
+                            <option value="Student">Student</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="creditScore">Credit Score *</label>
+                    <input type="number" id="creditScore" name="creditScore" required min="300" max="850" placeholder="e.g., 720">
+                </div>
+            </fieldset>
+
+            <fieldset class="section-fieldset">
+                <legend class="section-title">| Loan Requirements</legend>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="loanAmount">Loan Amount ($) *</label>
+                        <input type="number" id="loanAmount" name="loanAmount" required min="1000" placeholder="e.g., 500000">
+                    </div>
+                    <div class="form-group">
+                        <label for="loanTenure">Loan Tenure (Years) *</label>
+                        <input type="number" id="loanTenure" name="loanTenure" required min="1" max="30" placeholder="e.g., 5">
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label for="loanPurpose">Loan Purpose *</label>
+                    <select id="loanPurpose" name="loanPurpose" required>
+                        <option value="">Select a purpose</option>
+                        <option value="Home Improvement">Home Improvement</option>
+                        <option value="Debt Consolidation">Debt Consolidation</option>
+                        <option value="Education">Education</option>
+                        <option value="Business">Business</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <button type="submit" id="submitBtn">Submit Application</button>
+        </form>
+
+        <div id="resultContainer" class="result-container hidden">
+            <h3>&#128196; Model Decision:</h3>
+            <pre id="modelResult"></pre>
+        </div>
+
+    </div>
+
+    <div id="successModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <h2>&#127881; Success!</h2>
+                <p>🟢 **Your data has been successfully saved!**</p>
+                <p>Processing your details now...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
