@@ -58,3 +58,11 @@ Real-time risk prediction output
 #Use Case
 
 Loan default risk assessment and credit decision support
+
+
+
+
+
+
+#my personal repo link
+https://github.com/naveen-int/Credit-Path-AI.git
