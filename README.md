@@ -4,19 +4,18 @@ Credit Path AI is an end-to-end credit risk prediction system that evaluates the
 
 The backend validates the input data, runs it through the trained model, and returns a default risk prediction with probability, simulating a real-world credit decision workflow.
 
+
+
 #How It Works
 
-The user enters borrower details in the frontend form.
+1.The user enters borrower details in the frontend form.
+2.The frontend sends the data as a JSON request to the FastAPI backend using a POST API call.
+3.The backend validates the inputs and prepares them for the ML model.
+4.The XGBoost model predicts the probability of loan default.
+5.Based on the probability, a risk level is determined.
+6.The prediction result is returned to the frontend and displayed to the user.
 
-The frontend sends the data as a JSON request to the FastAPI backend using a POST API call.
 
-The backend validates the inputs and prepares them for the ML model.
-
-The XGBoost model predicts the probability of loan default.
-
-Based on the probability, a risk level is determined.
-
-The prediction result is returned to the frontend and displayed to the user.
 
 #Tech Stack
 
@@ -25,12 +24,16 @@ FastAPI
 XGBoost
 HTML, CSS, JavaScript
 
+
+
 #Key Features
 
 Structured borrower input form
 REST API for predictions
 Machine learning model inference
 Real-time risk prediction output
+
+
 
 #Use Case
 
