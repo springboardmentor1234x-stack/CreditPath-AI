@@ -1,4 +1,4 @@
-## CreditPath-AI
+# CreditPath-AI
 
 Credit Path AI is an end-to-end credit risk prediction system that evaluates the likelihood of loan default using a trained XGBoost machine learning model. The application collects borrower information through a clean and interactive frontend interface and processes it using a FastAPI-based backend.
 
