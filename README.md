@@ -6,14 +6,29 @@ The backend validates the input data, runs it through the trained model, and ret
 
 
 
+
+
+
+
+
 #How It Works
 
 1.The user enters borrower details in the frontend form.
+
 2.The frontend sends the data as a JSON request to the FastAPI backend using a POST API call.
+
 3.The backend validates the inputs and prepares them for the ML model.
+
 4.The XGBoost model predicts the probability of loan default.
+
 5.Based on the probability, a risk level is determined.
+
 6.The prediction result is returned to the frontend and displayed to the user.
+
+
+
+
+
 
 
 
@@ -23,6 +38,11 @@ Python
 FastAPI
 XGBoost
 HTML, CSS, JavaScript
+
+
+
+
+
 
 
 
