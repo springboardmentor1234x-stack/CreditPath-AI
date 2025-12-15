@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Credit Path-AI - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <div class="brand">CreditPath-AI</div>
+      <nav class="nav-right">
+        <a href="index.html" class="active">Home</a>
+        <a href="single_prediction.html">Single Prediction</a>
+        <a href="batch_prediction.html">Batch prediction</a>
+        <a id="logoutBtn" href="#">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <h1>AI-Powered Loan Default Risk Prediction</h1>
+      <p>Make data-driven decisions with advanced machine learning for credit risk assessment.</p>
+      <div class="hero-actions">
+        <a class="btn btn-outline" href="single_prediction.html">Start Prediction</a>
+        <a class="btn btn-teal" href="batch_prediction.html">Batch Prediction</a>
+      </div>
+
+      <div class="container stats" style="margin-top:10px;">
+        <div class="stat">
+          <h2>71.07%</h2>
+          <p>Model Accuracy (AUC-ROC)</p>
+        </div>
+        <div class="stat">
+          <h2>70%</h2>
+          <p>Prediction Accuracy</p>
+        </div>
+        <div class="stat">
+          <h2 id="usersCount">—</h2>
+          <p>Total users</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <div class="title">Key Features</div>
+      <div class="card-row">
+        <div class="feature-card">
+          <h3>Single Prediction</h3>
+          <p>Get instant default risk assessment for individual borrowers with detailed recommendations and actionable insights.</p>
+          <a class="card-cta" href="single_prediction.html">Try Now</a>
+        </div>
+
+        <div class="feature-card">
+          <h3>Batch Processing</h3>
+          <p>Upload CSV files to process multiple borrowers at once. Download results with risk levels and recovery actions.</p>
+          <a class="card-cta" href="batch_prediction.html">Upload CSV</a>
+        </div>
+
+        <div class="feature-card">
+          <h3>AI Engine</h3>
+          <p>Advanced model trained on tens of thousands of records to deliver fast and reliable predictions for loan management.</p>
+          <a class="card-cta" href="#">Learn More</a>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Credit Path-AI All rights reserved.</p>
+            
+        </div>
+    </footer>
+    </section>
+  </main>
+
+  <script>
+    // Ensure user logged in
+    (function(){
+      const token = localStorage.getItem('cpai_token');
+      if(!token){
+        // no token -> go to login
+        window.location.href = "login.html";
+        return;
+      }
+      // fetch user count
+      fetch("https://credit-path-ai-5i5a.onrender.com/users/count")
+        .then(r => r.json())
+        .then(j => {
+          if(j && typeof j.count !== 'undefined'){
+            document.getElementById('usersCount').innerText = j.count;
+          }
+        }).catch(_=>{});
+      document.getElementById('logoutBtn').addEventListener('click', (e)=>{
+        e.preventDefault();
+        localStorage.removeItem('cpai_token');
+        localStorage.removeItem('cpai_name');
+        window.location.href = 'login.html';
+      });
+    })();
+  </script>
+</body>
+</html>
+
+

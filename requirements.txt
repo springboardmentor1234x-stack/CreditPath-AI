@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+joblib
+email-validator
+scikit-learn
+pandas
+numpy
+xgboost
